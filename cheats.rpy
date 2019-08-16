@@ -1,3 +1,4 @@
+#----- Edited by S A Z ----- Completed 0.75 Part 1 and 2 Mod A
 
 label cheat:
     hide screen locations
@@ -31,6 +32,8 @@ screen cheat1():
         imagebutton auto "gui/icons/icon_abort_%s.png" xpos 930 ypos 69 action (Hide('cheat1'), Jump('cheatend')) hovered tt.Action ("Close") focus_mask True
 
         frame:
+            if tt.value == "" or tt.value ==" ":
+                background None
             xalign .5
             text tt.value
 

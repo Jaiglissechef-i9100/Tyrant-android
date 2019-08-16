@@ -1,29 +1,46 @@
+#----- Edited by S A Z ----- Completed 0.75 Part 1 and 2 Mod A
 
-
+#----- Event List -----
+# 1. 9pm Lil Sis Room - Alexis, MC, Nicole - Love, Corruption
+# 2. 10pm Lil Sis Room - Alexis, MC - Love, Corruption, Fetish Training
+#----- End List -----
 
 label lsislook:
     hide screen locations
-    pov "{i}Maybe I can see something?{/i}"
+    povi "Maybe I can see something?"
     scene black
-    pov "{i}Damn it. It's no use.{/i}"
+    povi "Damn it. It's no use."
     jump lsisroom
 
 label lsisopen:
     hide screen locations
     "You try to open the door."
-    pov "{i}Damn, it's locked.{/i}"
+    povi "It's locked."
     jump lsisroom
 
 label lsislisten:
     hide screen locations
     "You listen through the door."
-    pov "{i}Nothing. She must still be sleeping.{/i}"
+    povi "Nothing. Maybe she's sleeping?"
     jump lsisroom
-
-
 
 label lsis21talk:
     hide screen locations
+    if momlove > 40 and lilsislove > 40 or momcorruption > 30 and lilsiscorruption > 30:
+        scene edited main room upstairs listen
+        mom "Yeah I do too."
+        ls "He's just so cute now, you know..."
+        mom "I know right!"
+        mom "He's really grown up."
+        ls "I love when he just randomly hugs me!"
+        mom "I do too. I just want him to hold me forever sometimes."
+        povi "Are they talking about me?"
+        mom "Don't tell him any of this..."
+        if momlove > momcorruption:
+            mom "...but I sometime wish he could just take us all away together."
+        else:
+            mom "...but I sometimes wish he would just take me right then and there."
+        povi "Now I really hope they are talking about me!"
     scene lilsisroom 9pm 002
     if momrelationship < 30 and momntr == True or lilsisrelationship < 40 and lilsisntr == True:
         $ randomnum = renpy.random.randint(1,2)
@@ -37,12 +54,12 @@ label lsis21talk:
     ls "Hi dummy <giggle>."
     mom "[ls]!"
     pov "Hi you two."
-    pov "What you're doing?"
-    mom "Just some chit-chat."
+    pov "So whatcha doing?"
+    mom "Just girl talk..."
     ls "<giggle>"
     pov "Sure."
-    pov "{i}That wasn't at all honest.{/i}"
-    pov "Can I join?"
+    povi "That was convincing. Not!"
+    pov "Well, I didn't take a class on girl talk while I was away, so I might not be very good at it. But, can I join you guys?"
     mom "Sure."
     jump ls21lay
 
@@ -50,22 +67,23 @@ label ls21lay:
     call screen ls21lay1
 
 screen ls21lay1():
-    default tt = Tooltip (" ")
+    default tt = Tooltip ("")
 
-    fixed:
-        imagebutton auto "gui/icons/icon_unihand_%s.png" xpos 266 ypos 389 action (Hide('ls21lay1'), Jump('lsis21slay')) hovered tt.Action ("Let [ls] lay in the middle") focus_mask True
+    hbox xalign .5 yalign .1:
+        imagebutton auto "gui/icons/icon_unihand_%s.png" action (Hide('ls21lay1'), Jump('lsis21slay')) hovered tt.Action ("Let [ls] lay in the middle") focus_mask True
         if inc == True:
-            imagebutton auto "gui/icons/icon_unihand_%s.png" xpos 1274 ypos 389 action (Hide('ls21lay1'), Jump('lsis21mlay')) hovered tt.Action ("Let mom lay in the middle") focus_mask True
+            imagebutton auto "gui/icons/icon_unihand_%s.png" action (Hide('ls21lay1'), Jump('lsis21mlay')) hovered tt.Action ("Let mom lay in the middle") focus_mask True
         else:
-            imagebutton auto "gui/icons/icon_unihand_%s.png" xpos 1274 ypos 389 action (Hide('ls21lay1'), Jump('lsis21mlay')) hovered tt.Action ("Let [mother] lay in the middle") focus_mask True
-        frame:
-            xalign .5
-            text tt.value
+            imagebutton auto "gui/icons/icon_unihand_%s.png" action (Hide('ls21lay1'), Jump('lsis21mlay')) hovered tt.Action ("Let [mother] lay in the middle") focus_mask True
 
-
+    frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
+        xalign .5
+        text tt.value
 
 label lsis21mlay:
-    pov "Lay yourself in the middle please."
+    pov "Could you move to the middle please?"
     $ ls21mmiddle = True
     mom "Okay."
     scene lilsisroom 9pm 003a
@@ -76,9 +94,8 @@ label lsis21mlay:
     mom "Hahaha... yes..."
     jump ls21mlook
 
-
 label lsis21slay:
-    pov "Lay yourself in the middle please."
+    pov "Scoot on over to the middle please."
     $ ls21smiddle = True
     ls "Okay."
     scene lilsisroom 9pm 004b
@@ -89,7 +106,6 @@ label lsis21slay:
     mom "Hahaha... yes..."
     jump ls21mlook
 
-
 label ls21mlook:
     if ls21mmiddle == True:
         scene lilsisroom 9pm 003a
@@ -98,30 +114,32 @@ label ls21mlook:
     call screen ls21mlook1
 
 screen ls21mlook1():
-    default tt = Tooltip (" ")
+    default tt = Tooltip ("")
 
-    fixed:
+    hbox xalign .5 yalign .1:
         if ls21mmiddle == True:
-            imagebutton auto "gui/icons/icon_look_%s.png" xpos 1251 ypos 732 action (Hide('ls21mlook1'), Jump('lsis21mtits')) hovered tt.Action ("Look at tits") focus_mask True
-            imagebutton auto "gui/icons/icon_look_%s.png" xpos 200 ypos 612 action (Hide('ls21mlook1'), Jump('lsis21mlegs')) hovered tt.Action ("Look at legs") focus_mask True
-            imagebutton auto "gui/icons/icon_look_%s.png" xpos 1143 ypos 443 action (Hide('ls21mlook1'), Jump('lsis21lstits')) hovered tt.Action ("Look at tits") focus_mask True
-            imagebutton auto "gui/icons/icon_abort_%s.png" xpos 684 ypos 266 action (Hide('ls21mlook1'), Jump('ls21mlay2')) hovered tt.Action ("Stop looking") focus_mask True
+            imagebutton auto "gui/icons/icon_look_%s.png" action (Hide('ls21mlook1'), Jump('lsis21mtits')) hovered tt.Action ("Look at tits") focus_mask True
+            imagebutton auto "gui/icons/icon_look_%s.png" action (Hide('ls21mlook1'), Jump('lsis21mlegs')) hovered tt.Action ("Look at legs") focus_mask True
+            imagebutton auto "gui/icons/icon_look_%s.png" action (Hide('ls21mlook1'), Jump('lsis21lstits')) hovered tt.Action ("Look at tits") focus_mask True
+            imagebutton auto "gui/icons/icon_abort_%s.png" action (Hide('ls21mlook1'), Jump('ls21mlay2')) hovered tt.Action ("Stop looking") focus_mask True
         elif ls21smiddle == True:
-            imagebutton auto "gui/icons/icon_look_%s.png" xpos 818 ypos 507 action (Hide('ls21mlook1'), Jump('lsis21mtits')) hovered tt.Action ("Look at tits") focus_mask True
-            imagebutton auto "gui/icons/icon_look_%s.png" xpos 1431 ypos 458 action (Hide('ls21mlook1'), Jump('lsis21mlegs')) hovered tt.Action ("Look at legs") focus_mask True
-            imagebutton auto "gui/icons/icon_look_%s.png" xpos 818 ypos 801 action (Hide('ls21mlook1'), Jump('lsis21lstits')) hovered tt.Action ("Look at tits") focus_mask True
-            imagebutton auto "gui/icons/icon_abort_%s.png" xpos 1100 ypos 158 action (Hide('ls21mlook1'), Jump('ls21mlay2')) hovered tt.Action ("Stop looking") focus_mask True
+            imagebutton auto "gui/icons/icon_look_%s.png" action (Hide('ls21mlook1'), Jump('lsis21mtits')) hovered tt.Action ("Look at tits") focus_mask True
+            imagebutton auto "gui/icons/icon_look_%s.png" action (Hide('ls21mlook1'), Jump('lsis21mlegs')) hovered tt.Action ("Look at legs") focus_mask True
+            imagebutton auto "gui/icons/icon_look_%s.png" action (Hide('ls21mlook1'), Jump('lsis21lstits')) hovered tt.Action ("Look at tits") focus_mask True
+            imagebutton auto "gui/icons/icon_abort_%s.png" action (Hide('ls21mlook1'), Jump('ls21mlay2')) hovered tt.Action ("Stop looking") focus_mask True
 
-        frame:
-            xalign .5
-            text tt.value
+    frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
+        xalign .5
+        text tt.value
 
 label lsis21mtits:
     if ls21mmiddle == True:
         scene lilsisroom 9pm 004a
     else:
         scene lilsisroom 9pm 005b
-    pov "{i}Her big tits, so near me.{/i}"
+    povi "Seriously, it's not fair. Those enormous breats are so near me and I don't do anthing about it!"
     jump ls21mlook
 
 label lsis21mlegs:
@@ -129,7 +147,7 @@ label lsis21mlegs:
         scene lilsisroom 9pm 005a
     else:
         scene lilsisroom 9pm 006b
-    pov "{i}Her beautiful legs. Wrapped like gifts in these stockings.{/i}"
+    povi "Her beautiful legs. Wrapped up like gifts in those stockings."
     jump ls21mlook
 
 label lsis21lstits:
@@ -137,7 +155,7 @@ label lsis21lstits:
         scene lilsisroom 9pm 006a
     else:
         scene lilsisroom 9pm 007b
-    pov "{i}[ls] little tits. I can't wait to play with them some time.{/i}"
+    povi "[ls] perky tits are just amazing. Maybe I can convince her to let me play with them some time."
     jump ls21mlook
 
 label ls21mlay2:
@@ -145,11 +163,12 @@ label ls21mlay2:
         scene lilsisroom 9pm 007a
     else:
         scene lilsisroom 9pm 008b
-    mom "Knock! Knock!"
+    mom "Hello! Earth to [pov]!"
     ls "Wake up, dummy!"
     pov "Oh, sorry..."
     ls "We're talking about you."
     pov "About me...?"
+    povi "I knew it!"
     if inc == True:
         ls "Mom is still so happy that you're back home with us."
     else:
@@ -167,7 +186,7 @@ label ls21mlay2:
             ls "Aren't you [mother]?"
             mom "Yes... I'm so happy that you're here and can support us."
             pov "Me too, [mother]."
-    ls "Me too, also when you are a dummy. <giggle>"
+    ls "Me too, even though you are a big dummy. <giggle>"
     if ls21mmiddle == True:
         scene lilsisroom 9pm 009a
     else:
@@ -175,11 +194,11 @@ label ls21mlay2:
     if inc == True:
         ls "And what do you think about mom's dress. It's beautiful, isn't it?"
         mom "[ls]..."
-        ls "No mom. You're looking so much better since we started living here, I want to know big brothers opinion."
+        ls "No really mom. You're looking so much better since we started living here and I want to know big brothers opinion."
     else:
         ls "And what do you think about [mother]'s dress. It's beautiful, isn't it?"
         mom "[ls]..."
-        ls "No [mother]. You're looking so much better since we started living here, I want to know his opinion."
+        ls "No really [mother]. You're looking so much better since we started living here and I want to know his opinion."
     pov "Hmm..."
     jump ls21decide
 
@@ -187,22 +206,25 @@ label ls21decide:
     call screen ls21decide1
 
 screen ls21decide1():
-    default tt = Tooltip (" ")
+    default tt = Tooltip ("")
 
-    fixed:
-        imagebutton auto "gui/icons/icon_love_%s.png" xpos 944 ypos 150 action (Hide('ls21decide1'), Jump('ls21love')) hovered tt.Action ("Answer to improve Love [lv1]/both") focus_mask True
-        imagebutton auto "gui/icons/icon_corruption_%s.png" xpos 684 ypos 150 action (Hide('ls21decide1'), Jump('ls21cor')) hovered tt.Action ("Answer to improve Corruption [cr1]/both") focus_mask True
-        frame:
-            xalign .5
-            text tt.value
+    hbox xalign .5 yalign .1:
+        imagebutton auto "gui/icons/icon_love_%s.png" action (Hide('ls21decide1'), Jump('ls21love')) hovered tt.Action ("Answer to improve Love [lv1]/both") focus_mask True
+        imagebutton auto "gui/icons/icon_corruption_%s.png" action (Hide('ls21decide1'), Jump('ls21cor')) hovered tt.Action ("Answer to improve Corruption [cr1]/both") focus_mask True
+
+    frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
+        xalign .5
+        text tt.value
 
 label ls21love:
     if ls21mmiddle == True:
         scene lilsisroom 9pm 010a
     else:
         scene lilsisroom 9pm 011b
-    pov "[ls] is right. You look much more beautiful with your new style then before."
-    pov "And you're more confident then before. That undercover-quest seems to make you more lively."
+    pov "[ls] is right. You look even more beautiful with your new style then before."
+    pov "And you're more confident than before. This undercover-quest seems to have made you more lively."
     mom "Really, you think so?"
     if inc == True:
         ls "I told you mom."
@@ -219,7 +241,7 @@ label ls21love:
         pov "Yes [mother]. The new you is really amazing."
         mom "Thank you so much."
     mom "That makes me even happier."
-    pov "And [ls] is doing fine too. She grew up into a fine young adult."
+    pov "And [ls] is doing fine too. She grew up into a beautiful young woman."
     if ls21mmiddle == True:
         scene lilsisroom 9pm 012a
     else:
@@ -239,7 +261,7 @@ label ls21love:
     $ dtime += 1
     $ ls21mmiddle = False
     $ ls21smiddle = False
-    $ lilsisroom9pmfirst = True
+    $ lilsisroom9pmfirst = True # ----- Added in 0.6.5 -----
     jump lsisroom
 
 label ls21cor:
@@ -247,8 +269,8 @@ label ls21cor:
         scene lilsisroom 9pm 010ab
     else:
         scene lilsisroom 9pm 011bc
-    pov "[ls] is right. You look much more beautiful with your new style then before."
-    pov "The slutty look makes you damn sexy. You show yourself off like there is no need to hide something."
+    pov "[ls] is right. You look way more beautiful with your new style then before."
+    pov "The slutty look makes you look so damn sexy. You show yourself off like there is nothing too bold to show the world!"
     ls "I didn't mean it that way."
     mom "Eh?"
     if ls21mmiddle == True:
@@ -256,22 +278,22 @@ label ls21cor:
     else:
         scene lilsisroom 9pm 012bc
     pov "But I mean it that way!"
-    pov "You show off your assets like you don't know the word \"prude\"."
+    pov "You show off your assets like you don't know the meaning of the word \"slut\"."
     mom "But..."
     pov "That's the way women should act and dress and I love it."
-    pov "And it would be also really great if [ls] start to dress up like an adult woman too."
+    pov "And it would be also really great if [ls] started to dress up like an adult too."
     if ls21mmiddle == True:
         scene lilsisroom 9pm 012ab
     else:
         scene lilsisroom 9pm 013bc
     ls "What... You mean...?"
     if inc == True:
-        pov "Prove that you're proud of your grown boobs and your other assets like mom."
+        pov "Prove that you're proud of your growing breast and your other assets like mom."
     else:
-        pov "Prove that you're proud of your grown boobs and your other assets like your mother."
+        pov "Prove that you're proud of your growing breast and your other assets like your mother."
     mom "..."
-    ls "Dress more slutty...?"
-    pov "Yes, don't be afraid to be an adult like the other women!"
+    ls "Dress more, slutty...?"
+    pov "Yes, don't be afraid to be an adult, like the other women!"
     ls "I'm not afraid..."
     pov "Then don't be shy and show it..."
     mom "..."
@@ -281,20 +303,19 @@ label ls21cor:
     $ dtime += 1
     $ ls21mmiddle = False
     $ ls21smiddle = False
-    $ lilsisroom9pmfirst = True
+    $ lilsisroom9pmfirst = True # ----- Added in 0.6.5 -----
     jump lsisroom
-
 
 label lsis22lookass:
     hide screen locations
     scene lilsisroom 10pm 002a
-    pov "{i}Her small but firm ass. I bet it looks cute too.{/i}"
+    povi "Her small but firm ass. I bet it looks cute too."
     jump lsisroom
 
 label lsis22lookfeet:
     hide screen locations
     scene lilsisroom 10pm 003a
-    pov "{i}Those cute feet.{/i}"
+    povi "Those cute feet."
     jump lsisroom
 
 label lsis22talk:
@@ -330,7 +351,7 @@ label lsis22talk:
     ls "Hahaha... that was so funny."
     pov "Hahaha, you're right."
     if inc == True:
-        pov "{i}Her face is so close. I could kiss her right now.{/i}"
+        povi "Her face is so close. I could kiss her right now."
     pov "Let me show you something. I know some good stuff too."
     ls "Okay let me see it."
     jump l22v
@@ -339,14 +360,17 @@ label l22v:
     call screen l22v1
 
 screen l22v1():
-    default tt = Tooltip (" ")
+    default tt = Tooltip ("")
 
-    fixed:
-        imagebutton auto "gui/icons/icon_love_%s.png" xpos 1484 ypos 152 action (Hide('ls22v1'), Jump('ls22love')) hovered tt.Action ("Show her more funny videos [lv1]") focus_mask True
-        imagebutton auto "gui/icons/icon_corruption_%s.png" xpos 1484 ypos 390 action (Hide('ls22v1'), Jump('ls22cor')) hovered tt.Action ("Show her some porn [cr1]") focus_mask True
-        frame:
-            xalign .5
-            text tt.value
+    hbox xalign .5 yalign .1:
+        imagebutton auto "gui/icons/icon_love_%s.png" action (Hide('ls22v1'), Jump('ls22love')) hovered tt.Action ("Show her more funny videos [lv1]") focus_mask True
+        imagebutton auto "gui/icons/icon_corruption_%s.png" action (Hide('ls22v1'), Jump('ls22cor')) hovered tt.Action ("Show her some porn [cr1]") focus_mask True
+
+    frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
+        xalign .5
+        text tt.value
 
 label ls22cor:
     pov "So look at this."
@@ -354,24 +378,35 @@ label ls22cor:
     call screen ls22cor1
 
 screen ls22cor1():
-    default tt = Tooltip (" ")
+    modal True
+    default tt = Tooltip ("Select Porn")
+    tag ls22cortIag
 
-    fixed:
-        imagebutton auto "gui/icons/icon_unihand_%s.png" xpos 1433 ypos 300 action (Hide('ls22cor1'), Jump('ls22cor2gb')) hovered tt.Action ("Gang Bang") focus_mask True
-        imagebutton auto "gui/icons/icon_unihand_%s.png" xpos 1272 ypos 390 action (Hide('ls22cor1'), Jump('ls22cor2bdsm')) hovered tt.Action ("BDSM") focus_mask True
+    hbox xalign .5 yalign .1:
+        imagebutton auto "gui/icons/icon_unihand_%s.png" action (Hide('ls22cor1'), Jump('ls22cor2anal')) hovered tt.Action ("Anal") focus_mask True
+        imagebutton auto "gui/icons/icon_unihand_%s.png" action (Hide('ls22cor1'), Jump('ls22cor2bdsm')) hovered tt.Action ("BDSM") focus_mask True
+        imagebutton auto "gui/icons/icon_unihand_%s.png" action (Hide('ls22cor1'), Jump('ls22cor2femdom')) hovered tt.Action ("Femdom") focus_mask True
+        imagebutton auto "gui/icons/icon_unihand_%s.png" action (Hide('ls22cor1'), Jump('ls22cor2gb')) hovered tt.Action ("Gang Bang") focus_mask True
         if inc == True:
-            imagebutton auto "gui/icons/icon_unihand_%s.png" xpos 1517 ypos 140 action (Hide('ls22cor1'), Jump('ls22cor2inc')) hovered tt.Action ("Incest") focus_mask True
-        imagebutton auto "gui/icons/icon_unihand_%s.png" xpos 1287 ypos 125 action (Hide('ls22cor1'), Jump('ls22cor2int')) hovered tt.Action ("Interracial") focus_mask True
-        imagebutton auto "gui/icons/icon_unihand_%s.png" xpos 1131 ypos 218 action (Hide('ls22cor1'), Jump('ls22cor2les')) hovered tt.Action ("Lesbian") focus_mask True
+            imagebutton auto "gui/icons/icon_unihand_%s.png" action (Hide('ls22cor1'), Jump('ls22cor2inc')) hovered tt.Action ("Incest") focus_mask True
+        imagebutton auto "gui/icons/icon_unihand_%s.png" action (Hide('ls22cor1'), Jump('ls22cor2int')) hovered tt.Action ("Interracial") focus_mask True
+        imagebutton auto "gui/icons/icon_unihand_%s.png" action (Hide('ls22cor1'), Jump('ls22cor2les')) hovered tt.Action ("Lesbian") focus_mask True
         if NTR == True:
-            imagebutton auto "gui/icons/icon_unihand_%s.png" xpos 1002 ypos 98 action (Hide('ls22cor1'), Jump('ls22cor2ntr')) hovered tt.Action ("NTR") focus_mask True
-        imagebutton auto "gui/icons/icon_unihand_%s.png" xpos 1007 ypos 306 action (Hide('ls22cor1'), Jump('ls22cor2anal')) hovered tt.Action ("Anal") focus_mask True
-        imagebutton auto "gui/icons/icon_unihand_%s.png" xpos 1587 ypos 488 action (Hide('ls22cor1'), Jump('ls22cor2femdom')) hovered tt.Action ("Femdom") focus_mask True
+            imagebutton auto "gui/icons/icon_unihand_%s.png" action (Hide('ls22cor1'), Jump('ls22cor2ntr')) hovered tt.Action ("NTR") focus_mask True
+        imagebutton auto "gui/icons/icon_abort_%s.png" action (Hide('ls22cor1'), Jump('ls22love')) hovered tt.Action ("Nevermind") focus_mask True
+
         frame:
+            if tt.value == "" or tt.value ==" ":
+                background None
             xalign .5
-            text tt.value
-
-
+            yalign .23
+            xanchor .5
+            yanchor .23
+            xfill True
+            yfill True
+            xmaximum 252
+            ymaximum 63
+            text tt.value at center
 
 label ls22love:
     pov "So look at this."
@@ -398,9 +433,9 @@ label ls22love:
     pov "Oh yes, hahaha..."
     ls "I just can't stop..."
     pov "I'd love to see you laughing all day, that's really cute."
-    ls "Haha, I bet you'd wish, dummy."
+    ls "Haha, I bet you do, dummy."
     pov "Haha, that was fun."
-    ls "Oh yes, it was. I missed that when you were away."
+    ls "Yeah, it was. I missed that when you were away."
     if adatekiss == True and lilsislove >= 30:
         jump ls22kiss
     else:
@@ -412,8 +447,6 @@ label ls22love2:
     $ dtime += 1
     $ lilsisroom10pmfirst = True
     jump lsisroom
-
-
 
 label ls22cor2gb:
     scene lilsisroom 10pm 008gb1
@@ -429,20 +462,20 @@ label ls22cor2gb:
         ls "Why are you showing me porn [pov]?"
         pov "Adults watch this stuff, so I thought I would show you."
         ls "But watching porn with you..."
-    pov "And? Is there a problem? We're just watching, not doing it."
+    pov "Is there a problem with that? We're just watching, not doing it."
     ls "But..."
     pov "And do you like it?"
     ls "It's porn..."
-    pov "Yes it's not a funny video but porn can put one in a good mood."
+    pov "Yeah it's not a funny video but porn can put you in a good mood too."
     ls "Hmm..."
     scene lilsisroom 10pm 008gb2
     "Girl" "Hnng... Yesshh! More..."
     pov "See! She's getting a good ride!"
     ls "Hm..."
-    pov "Just enjoy it longer. You'll get used to it."
+    pov "Just watch it a bit longer. You'll start to like it, I'm sure."
     scene lilsisroom 10pm 011a
     ls "Hmmmmm..."
-    pov "I knew you would like it. So you can have nice dreams tonight."
+    pov "I knew you would like it. So you now can have nice dreams tonight."
     ls "..."
     $ lsisprongangbang += 1
     $ lilsisrelationship += 1
@@ -450,7 +483,6 @@ label ls22cor2gb:
     $ dtime += 1
     $ lilsisroom10pmfirst = True
     jump lsisroom
-
 
 label ls22cor2bdsm:
     scene lilsisroom 10pm 008bdsm1
@@ -466,20 +498,20 @@ label ls22cor2bdsm:
         ls "Why are you showing me porn [pov]?"
         pov "Adults watch this stuff, so I thought I would show you."
         ls "But watching porn with you..."
-    pov "And? Is there a problem? We're just watching, not doing it."
+    pov "Is there a problem with that? We're just watching, not doing it."
     ls "But..."
     pov "And do you like it?"
     ls "It's porn..."
-    pov "Yes it's not a funny video but porn can give you a good mood."
+    pov "Yeah it's not a funny video but porn can put you in a good mood too."
     ls "Hmm..."
     scene lilsisroom 10pm 008bdsm2
     "Girl" "Please master! I can't... hah... longer... hnng..."
     pov "Look! The bad girl enjoys her punishment."
     ls "Hm..."
-    pov "Just enjoy it longer. You'll get used to it."
+    pov "Just watch it a bit longer. You'll start to like it, I'm sure."
     scene lilsisroom 10pm 011a
     ls "Hmmmmm..."
-    pov "I knew you would like it. So you can have nice dreams tonight."
+    pov "I knew you would like it. So you now can have nice dreams tonight."
     ls "..."
     $ lsispronBDSM += 1
     $ lilsisrelationship += 1
@@ -487,7 +519,6 @@ label ls22cor2bdsm:
     $ dtime += 1
     $ lilsisroom10pmfirst = True
     jump lsisroom
-
 
 label ls22cor2inc:
     scene lilsisroom 10pm 008inc1
@@ -503,20 +534,20 @@ label ls22cor2inc:
         ls "Why are you showing me porn [pov]?"
         pov "Adults watch this stuff, so I thought I would show you."
         ls "But watching porn with you..."
-    pov "And? Is there a problem? We're just watching, not doing it."
+    pov "Is there a problem with that? We're just watching, not doing it."
     ls "But..."
     pov "And do you like it?"
     ls "It's porn..."
-    pov "Yes it's not a funny video but porn can give you a good mood."
+    pov "Yeah it's not a funny video but porn can put you in a good mood too."
     ls "Hmm..."
     scene lilsisroom 10pm 008inc2
     "Girl" "Please come inside me, big brother! I want to be your wife!"
     pov "Look, the little sister loves her brother so much."
     ls "Hm..."
-    pov "Just enjoy it longer. You'll get used to it."
+    pov "Just watch it a bit longer. You'll start to like it, I'm sure."
     scene lilsisroom 10pm 011a
     ls "Hmmmmm..."
-    pov "I knew you would like it. So you can have nice dreams tonight."
+    pov "I knew you would like it. So you now can have nice dreams tonight."
     ls "..."
     $ lsisproninc += 1
     $ lilsisrelationship += 1
@@ -524,7 +555,6 @@ label ls22cor2inc:
     $ dtime += 1
     $ lilsisroom10pmfirst = True
     jump lsisroom
-
 
 label ls22cor2int:
     scene lilsisroom 10pm 008int1
@@ -540,20 +570,20 @@ label ls22cor2int:
         ls "Why are you showing me porn [pov]?"
         pov "Adults watch this stuff, so I thought I would show you."
         ls "But watching porn with you..."
-    pov "And? Is there a problem? We're just watching, not doing it."
+    pov "Is there a problem with that? We're just watching, not doing it."
     ls "But..."
     pov "And do you like it?"
     ls "It's porn..."
-    pov "Yes it's not a funny video but porn can give you a good mood."
+    pov "Yeah it's not a funny video but porn can put you in a good mood too."
     ls "Hmm..."
     scene lilsisroom 10pm 008int2
     "Girl" "Hah... yes! I want to cum more from your... hah... dick!"
     pov "Look the girl's getting addicted to the black man."
     ls "Hm..."
-    pov "Just enjoy it longer. You'll get used to it."
+    pov "Just watch it a bit longer. You'll start to like it, I'm sure."
     scene lilsisroom 10pm 011a
     ls "Hmmmmm..."
-    pov "I knew you would like it. So you can have nice dreams tonight."
+    pov "I knew you would like it. So you now can have nice dreams tonight."
     ls "..."
     $ lsisproninterracial += 1
     $ lilsisrelationship += 1
@@ -561,7 +591,6 @@ label ls22cor2int:
     $ dtime += 1
     $ lilsisroom10pmfirst = True
     jump lsisroom
-
 
 label ls22cor2les:
     scene lilsisroom 10pm 008les1
@@ -577,20 +606,20 @@ label ls22cor2les:
         ls "Why are you showing me porn [pov]?"
         pov "Adults watch this stuff, so I thought I would show you."
         ls "But watching porn with you..."
-    pov "And? Is there a problem? We're just watching, not doing it."
+    pov "Is there a problem with that? We're just watching, not doing it."
     ls "But..."
     pov "And do you like it?"
     ls "It's porn..."
-    pov "Yes it's not a funny video but porn can give you a good mood."
+    pov "Yeah it's not a funny video but porn can put you in a good mood too."
     ls "Hmm..."
     scene lilsisroom 10pm 008les2
     "Girl" "More! Lick... me more... hah... so gentle!"
     pov "Look! The girlfriends getting naughtier."
     ls "Hm..."
-    pov "Just enjoy it longer. You'll get used to it."
+    pov "Just watch it a bit longer. You'll start to like it, I'm sure."
     scene lilsisroom 10pm 011a
     ls "Hmmmmm..."
-    pov "I knew you would like it. So you can have nice dreams tonight."
+    pov "I knew you would like it. So you now can have nice dreams tonight."
     ls "..."
     $ lsispronlesbian += 1
     $ lilsisrelationship += 1
@@ -598,7 +627,6 @@ label ls22cor2les:
     $ dtime += 1
     $ lilsisroom10pmfirst = True
     jump lsisroom
-
 
 label ls22cor2ntr:
     scene lilsisroom 10pm 008ntr1
@@ -614,20 +642,20 @@ label ls22cor2ntr:
         ls "Why are you showing me porn [pov]?"
         pov "Adults watch this stuff, so I thought I would show you."
         ls "But watching porn with you..."
-    pov "And? Is there a problem? We're just watching, not doing it."
+    pov "Is there a problem with that? We're just watching, not doing it."
     ls "But..."
     pov "And do you like it?"
     ls "It's porn..."
-    pov "Yes it's not a funny video but porn can give you a good mood."
+    pov "Yeah it's not a funny video but porn can put you in a good mood too."
     ls "Hmm..."
     scene lilsisroom 10pm 008ntr2
     "Boy" "Nooo! He came inside you. You're not on the pill!"
     pov "Haha... the boy is a cucky!"
     ls "Hm..."
-    pov "Just enjoy it longer. You'll get used to it."
+    pov "Just watch it a bit longer. You'll start to like it, I'm sure."
     scene lilsisroom 10pm 011a
     ls "Hmmmmm..."
-    pov "I knew you would like it. So you can have nice dreams tonight."
+    pov "I knew you would like it. So you now can have nice dreams tonight."
     ls "..."
     $ lsispronntr += 1
     $ lilsisrelationship += 1
@@ -635,7 +663,6 @@ label ls22cor2ntr:
     $ dtime += 1
     $ lilsisroom10pmfirst = True
     jump lsisroom
-
 
 label ls22cor2anal:
     scene lilsisroom 10pm 008anal1
@@ -651,20 +678,20 @@ label ls22cor2anal:
         ls "Why are you showing me porn [pov]?"
         pov "Adults watch this stuff, so I thought I would show you."
         ls "But watching porn with you..."
-    pov "And? Is there a problem? We're just watching, not doing it."
+    pov "Is there a problem with that? We're just watching, not doing it."
     ls "But..."
     pov "And do you like it?"
     ls "It's porn..."
-    pov "Yes it's not a funny video but porn can give you a good mood."
+    pov "Yeah it's not a funny video but porn can put you in a good mood too."
     ls "Hmm..."
     scene lilsisroom 10pm 008anal2
     "Girl" "Hnng... you're hah... all in..."
     pov "Look! She's taking it all in her ass!"
     ls "Hm..."
-    pov "Just enjoy it longer. You'll get used to it."
+    pov "Just watch it a bit longer. You'll start to like it, I'm sure."
     scene lilsisroom 10pm 011a
     ls "Hmmmmm..."
-    pov "I knew you would like it. So you can have nice dreams tonight."
+    pov "I knew you would like it. So you now can have nice dreams tonight."
     ls "..."
     $ lsispronanal += 1
     $ lilsisrelationship += 1
@@ -672,7 +699,6 @@ label ls22cor2anal:
     $ dtime += 1
     $ lilsisroom10pmfirst = True
     jump lsisroom
-
 
 label ls22cor2femdom:
     scene lilsisroom 10pm 008femdom1
@@ -688,20 +714,20 @@ label ls22cor2femdom:
         ls "Why are you showing me porn [pov]?"
         pov "Adults watch this stuff, so I thought I would show you."
         ls "But watching porn with you..."
-    pov "And? Is there a problem? We're just watching, not doing it."
+    pov "Is there a problem with that? We're just watching, not doing it."
     ls "But..."
     pov "And do you like it?"
     ls "It's porn..."
-    pov "Yes it's not a funny video but porn can give you a good mood."
+    pov "Yeah it's not a funny video but porn can put you in a good mood too."
     ls "Hmm..."
     scene lilsisroom 10pm 008femdom2
     "Man" "Hah... yes... harder, mistress!"
     pov "He's so obedient!"
     ls "Hm..."
-    pov "Just enjoy it longer. You'll get used to it."
+    pov "Just watch it a bit longer. You'll start to like it, I'm sure."
     scene lilsisroom 10pm 011a
     ls "Hmmmmm..."
-    pov "I knew you would like it. So you can have nice dreams tonight."
+    pov "I knew you would like it. So you now can have nice dreams tonight."
     ls "..."
     $ lsispronfemdom += 1
     $ lilsisrelationship += 1
@@ -710,24 +736,23 @@ label ls22cor2femdom:
     $ lilsisroom10pmfirst = True
     jump lsisroom
 
-
 label ls22kiss:
     scene lilsisroom 10pm 012b
     if inc == True:
         ls "Come here, big brother."
     else:
         ls "Come here, [pov]."
-    pov "Oh, what is it?"
-    pov "{i}What does she want to do? Revenge?{/i}"
+    pov "Why...?"
+    povi "What does she want to do? Get revenge?"
     scene lilsisroom 10pm 013b
     ls "Muah!"
-    pov "{i}Wow!{/i}"
+    povi "Wow!"
     "[ls] kisses you on the mouth."
     scene lilsisroom 10pm 014b
     pov "What was that for?"
     ls "Nothing! I just wanted to do it."
     pov "Oh, thank you, I liked it."
-    pov "{i}Maybe my advice at the date motivated her?{/i}"
+    povi "Maybe our date went better than I thought?"
     $ lsiskiss += 1
     $ lilsislove += 1
     $ lilsisroom10pmfirst = True

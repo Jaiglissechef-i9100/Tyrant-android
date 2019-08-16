@@ -1,4 +1,4 @@
-
+#----- Edited by S A Z ----- Completed 0.75 Part 1 and 2 Mod A
 
 label sp2pmgiftfl:
     hide screen locations
@@ -14,12 +14,11 @@ label sp2pmgiftfl:
             pov "You're welcome."
         else:
             scene town secret 2pm 000gilored
-            ls "Oh you bought me flowers. Thanks."
+            ls "Oh! You bought me flowers. Thanks."
             pov "You're welcome."
         $ lilsisrelationship += 5
         $ lilsislove += 5
     jump lsisroom
-
 
 label sp2pmgiftco:
     hide screen locations
@@ -45,7 +44,6 @@ label sp2pmgiftco:
         $ lilsiscorruption += 5
     jump lsisroom
 
-
 label sp2pmgiftcho:
     hide screen locations
     if giftchocolatedaya == True:
@@ -60,11 +58,10 @@ label sp2pmgiftcho:
             pov "You're welcome."
         else:
             scene town secret 2pm 000gilored
-            ls "Oh you bought me chocolate. Thanks."
+            ls "Oh! you bought me chocolate. Thanks."
             pov "You're welcome."
         $ lilsisrelationship += 5
     jump lsisroom
-
 
 label mom12pmgiftfl:
     if giftflowersdayn == True:
@@ -98,7 +95,7 @@ label mom12pmgiftfl:
                 scene diningroom 12pm 003ngiloredcl2
             else:
                 scene diningroom 12pm 003ngilored
-            mom "Oh you bought me flowers. Thanks."
+            mom "Oh! You bought me flowers. Thanks."
             ls "Oh, how sweet!"
             pov "You're welcome."
         $ momrelationship += 5
@@ -184,7 +181,7 @@ label mom12pmgiftcho:
                 scene diningroom 12pm 003ngiloredcl2
             else:
                 scene diningroom 12pm 003ngilored
-            mom "Oh you bought me chocolate. Thanks."
+            mom "Oh! You bought me chocolate. Thanks."
             ls "Oh, tasty!"
             pov "You're welcome."
         $ momrelationship += 5
@@ -240,10 +237,6 @@ label mom12pmgiftro:
     pov "Of course."
     jump droom12gift
 
-
-
-
-
 label ls12pmgiftfl:
     if giftflowersdaya == True:
         scene black
@@ -276,7 +269,7 @@ label ls12pmgiftfl:
                 scene diningroom 12pm 003agiloredcl2
             else:
                 scene diningroom 12pm 003agilored
-            ls "Oh you bought me flowers. Thanks."
+            ls "Oh! You bought me flowers. Thanks."
             mom "What a nice idea!"
             pov "You're welcome."
         $ lilsisrelationship += 5
@@ -364,12 +357,11 @@ label ls12pmgiftcho:
                 scene diningroom 12pm 003agiloredcl2
             else:
                 scene diningroom 12pm 003agilored
-            ls "Oh you bought me chocolate. Thanks."
+            ls "Oh! you bought me chocolate. Thanks."
             mom "Haha, but no eating it now!"
             pov "You're welcome."
         $ lilsisrelationship += 5
     jump droom12gift
-
 
 label bs12pmgiftfl:
     if giftflowersdayc == True:
@@ -445,8 +437,6 @@ label bs12pmgiftcho:
         $ bigsisrelationship += 5
     jump droom12gift
 
-
-
 label dr7amgiftfl:
     hide screen locations
     if giftflowersdayn == True:
@@ -505,12 +495,10 @@ label dr7amgiftcho:
             pov "You're welcome."
         else:
             scene diningroom 7am 004gilored
-            mom "Oh you bought me chocolate. Thanks."
+            mom "Oh! you bought me chocolate. Thanks."
             pov "You're welcome."
         $ momrelationship += 5
     jump droom
-
-
 
 label ls10pmgiftfl:
     hide screen locations
@@ -526,7 +514,7 @@ label ls10pmgiftfl:
             pov "You're welcome."
         else:
             scene lilsisroom 10pm 004gilored
-            ls "Oh you bought me flowers. Thanks."
+            ls "Oh! You bought me flowers. Thanks."
             pov "You're welcome."
         $ lilsisrelationship += 5
         $ lilsislove += 5
@@ -570,11 +558,10 @@ label ls10pmgiftcho:
             pov "You're welcome."
         else:
             scene lilsisroom 10pm 004gilored
-            ls "Oh you bought me chocolate. Thanks."
+            ls "Oh! You bought me chocolate. Thanks."
             pov "You're welcome."
         $ lilsisrelationship += 5
     jump lsisroom
-
 
 label irfd21giftfl:
     if giftflowersdayi == True:
@@ -590,7 +577,7 @@ label irfd21giftfl:
             bs "..."
         else:
             scene frontdoor 9pm 003igilored
-            irina "Oh you bought me flowers. Thanks."
+            irina "Oh! You bought me flowers. Thanks."
             pov "You're welcome."
             bs "..."
         $ irinarelationship += 5
@@ -634,12 +621,11 @@ label irfd21giftcho:
             bs "..."
         else:
             scene frontdoor 9pm 003igilored
-            irina "Oh you bought me chocolate. Thanks."
+            irina "Oh! You bought me chocolate. Thanks."
             pov "You're welcome."
             bs "..."
         $ irinarelationship += 5
     jump frontdoor21talk2
-
 
 label bsfd21giftfl:
     if giftflowersdayc == True:
@@ -655,7 +641,7 @@ label bsfd21giftfl:
             irina "Oh, how sweet!"
         else:
             scene frontdoor 9pm 003cgilored
-            bs "Oh you bought me flowers..."
+            bs "Oh! You bought me flowers..."
             pov "You're welcome."
             irina "Oh, how sweet!"
         $ bigsisrelationship += 5

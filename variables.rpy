@@ -1,7 +1,7 @@
+#----- Edited by S A Z ----- Completed 0.75 Part 1 and 2 Mod A
 
 init -5:
     $ gamemusic = True
-
 
 init:
 
@@ -10,9 +10,7 @@ init:
     $ day = 1
     $ hardntr = False
     $ weekendactivities = 0
-    $ weekend = False
-
-
+    $ weekend = False #----- Added 0.7 -----
 
     $ momrelationship = 20
     $ momlove = 0
@@ -21,8 +19,7 @@ init:
     $ momanal = 0
     $ mompussy = 0
     $ nicolebabywant = False
-    $ nicoleonpill = True
-
+    $ nicoleonpill = True #----- Added 0.75 Part 1 -----
 
     $ lilsisrelationship = 50
     $ lilsislove = 0
@@ -31,13 +28,11 @@ init:
     $ alexisvirgin = True
     $ alexisbabywant = False
 
-
     $ bigsisrelationship = 10
     $ bigsislove = 0
     $ bigsiscorruption = 0
     $ bigsisntr = False
     $ cassandrababywant = False
-
 
     $ dadrelationship = 0
     $ dadgood = 0
@@ -46,22 +41,18 @@ init:
     $ dadandmiranda = False
     $ dadalone = False
 
-
     $ steverelationship = 0
     $ stevegood = 0
     $ stevebad = 0
-
 
     $ daviderelationship = 0
     $ davidegood = 0
     $ davidebad = 0
 
-
     $ martingood = 0
     $ martinbad = 0
     $ frontd1approve = False
     $ frontd1disapprove = False
-
 
     $ irinarelationship = 10
     $ irinalove = 0
@@ -69,30 +60,24 @@ init:
     $ irinantr = False
     $ irinababywant = False
 
-
     $ cindyrelationship = 10
     $ cindylove = 0
     $ cindycorruption = 0
     $ cindyntr = False
 
-
     $ jeremygood = 0
     $ jeremybad = 0
-
 
     $ robertgood = 0
     $ robertbad = 0
 
-
     $ frankgood = 0
     $ frankbad = 0
-
 
     $ vivianrelationship = 10
     $ vivianlove = 0
     $ viviancorruption = 0
     $ vivianntr = False
-
 
     $ katerelationship = 10
     $ katelove = 0
@@ -100,22 +85,17 @@ init:
     $ katentr = False
     $ katebabywant = False
 
-
     $ susanrelationship = 10
     $ susanlove = 0
     $ susancorruption = 0
     $ susanntr = False
     $ susanbabywant = False
 
-
     $ mirandarelationship = 10
     $ mirandalove = 0
     $ mirandacorruption = 0
     $ mirandantr = False
     $ mirandababywant = False
-
-
-
 
     $ vlroom8momslap = 0
     $ vlroom8momhug = 0
@@ -164,15 +144,11 @@ init:
     $ nicoleweekendntrreveal = False
     $ nicoleweekendntrpussy = False
     $ nicoleweekendcorinside = False
+    #----- added 0.75 Part 1 -----
     $ proom19fuckass = False
     $ proom19lovesex = False
     $ alexissuspicous = 0
     $ alexisaway = False
-
-
-
-
-
 
     $ vkitchen8lsistalknight = False
     $ vkitchen8lsisrubass = False
@@ -218,9 +194,6 @@ init:
     $ base2likentr = False
     $ meet4am = False
     $ alexisweekendinside = False
-    $ showerup7amextyes = False
-
-
 
     $ kitchen9meet = False
     $ vlroom10firstposlove = False
@@ -245,7 +218,6 @@ init:
     $ basement10cassandraoutingnshare = False
     $ basement10cassandraoutingcshare = False
 
-
     $ setuppron = False
     $ setupnopron = False
     $ prongangbang = False
@@ -265,17 +237,14 @@ init:
     $ selldrugs = False
     $ selldrugsamount = 0
 
-
     $ irinalroom15love = False
     $ irinalroom15cor = False
     $ irinadatetemplepantyoff = False
     $ irinadatetempledt = False
 
-
     $ frontdoorddfirst = False
     $ gangmember = False
     $ gangmemberaccept = 0
-
 
     $ droom7momtalknight1 = False
     $ vlroom8momtalknight2 = False
@@ -332,6 +301,7 @@ init:
     $ irinacaslesbi = False
     $ irinadatetemplefirst = False
     $ irinadatetemplentr = False
+    #----- Added 0.7 -----
     $ irinadaterewardcheekfirst = False
     $ irinadaterewardfkissfirst = False
     $ irinadaterewarddickgrabfirst = False
@@ -342,17 +312,10 @@ init:
     $ lesbiandate2 = False
     $ lesbiandate2ntr = False
     $ lesbiandate2ntrsee = False
+    #----- Added 0.75 Part 1 -----
     $ proom19extlovefirst = False
     $ proom19first = False
     $ baseorgyfirst = False
-    $ showerup7amextfirstcor = False
-    $ showerup7amextfirstcor2 = False
-    $ showerup7amextfirstlove = False
-    $ showerup7amextfirstlove2 = False
-
-
-
-
 
     $ martinfirstmeet = False
     $ irinafirstmeet = False
@@ -364,8 +327,7 @@ init:
     $ cindyfirstmeet = False
     $ susanfirstmeet = False
     $ mirandafirstmeet = False
-
-
+    $ rubyfirstmeet = False
 
     $ club19right = False
     $ club19middle = False
@@ -373,27 +335,23 @@ init:
     $ club19leftleft = False
     $ club20extend = False
 
-
     $ mirandacumface = False
     $ mompaddle = False
     $ mirandass = False
-    $ base4ntrlike = False
+    $ base4ntrlike = False #----- removed from 0.3.5 - part 3.rpy -----
     $ base9spankh = False
     $ base9nickiss = False
+    #----- Added 0.75 Part 1 -----
     $ baseorgyaoaniclosedavy = False
     $ baseorgymiddle = False
     $ baseorgyright = False
     $ baseorgyleft = False
 
-
-
     $ k2amntr = False
     $ k2amon = False
     $ vipntrfrank = False
 
-
     $ sp2pmextend = False
-
 
     $ giftcondoms = 0
     $ giftflowers = 0
@@ -422,9 +380,6 @@ init:
     $ nicolerobewear = False
     $ nicolerobe = 1
 
-
-
-
     $ d9rnntri = False
     $ d9rnntr = False
     $ d9rncor = False
@@ -435,9 +390,6 @@ init:
     $ b9rnntrmir = False
     $ b9rnlove = False
     $ b9rncor = False
-
-
-
 
     $ d1ranormal = False
     $ d1ralove = False
@@ -452,8 +404,6 @@ init:
     $ b4rantrdavidey = False
     $ b4rantrdavidei = False
 
-
-
     $ d5rccor = False
     $ d5rccorfuck = False
     $ d5rcbjsw = False
@@ -466,7 +416,6 @@ init:
     $ d5love = False
     $ d5corruption = False
 
-
     $ ntrhatenic = False
     $ ntrlovenic = False
     $ ntrhateale = False
@@ -475,8 +424,6 @@ init:
     $ ntrlovecas = False
     $ ntrloveiri = False
     $ ntrhateiri = False
-
-
 
     $ lroom15extendfirst = False
     $ lroom15extendcaslove = False
@@ -498,9 +445,6 @@ init:
     $ club20extendedcascorfirst = False
     $ club20extendedcascorsecond = False
     $ secret2corfirst = False
-
-
-
 
     $ nicole_help_simple_love = False
     $ nicole_help_full_love = False
@@ -533,7 +477,7 @@ init:
     $ player_help_full_gang = False
     $ player_help_more_gang = False
 
-
+    #----- Added 0.7 -----
     $ roomlroom = False
     $ roomdroom = False
     $ roomkitchen = False
@@ -590,3 +534,282 @@ init:
     $ davidenotification = 0
     $ replydavidentr = 0
     $ activatesecretplacentr = False
+
+    #----- added in 0.75 Part 2 -----
+    $ showerup7amextyes = False
+    $ showerup7amextfirstcor = False
+    $ showerup7amextfirstcor2 = False
+    $ showerup7amextfirstlove = False
+    $ showerup7amextfirstlove2 = False
+
+#----- Custom Variables -----
+    $ showeraftermath = 0
+    $ lroom8momtalkfirst = True
+    $ lroom11pmkissremember = False
+    $ proom8pmloveaskquestionbefore = False
+    $ fitnessshowercas = False
+    $ fitnessshoweriri = False
+    $ deepthroatcount = 0
+    $ basecasfrankntr = False
+    $ dadcasbasementfirst = False
+
+#----- Darker Paths -----
+    $ nicole_voyeur = False #----- ntrlovenic ----- Original Variable
+    $ nicole_ntr = False #----- ntrhatenic ----- Original Variable
+    $ nicole_revenge = False
+    $ nicole_sadist = False
+
+    $ alexis_voyeur = False #----- ntrloveale ----- Original Variable
+    $ alexis_ntr = False #----- ntrhateale ----- Original Variable
+    $ alexis_revenge = False
+    $ alexis_sadist = False
+
+    $ cassandra_voyeur = False #----- ntrlovecas ----- Original Variable
+    $ cassandra_ntr = False #----- ntrhatecas ----- Original Variable
+    $ cassandra_revenge = False
+    $ cassandra_sadist = False
+
+    $ irina_voyeur = False #----- ntrloveiri ----- Original Variable
+    $ irina_ntr = False #----- ntrhateiri ----- Original Variable
+    $ irina_revenge = False
+    $ irina_sadist = False
+
+    $ phoneiconpos = True
+    #$ phonebackgroundimages = ["gui/icons/phone.png", "images/edited/gui/phoneback/background01.png", "images/edited/gui/phoneback/background02.png", "images/edited/gui/phoneback/background03.png"]
+    $ phonebackindex = 0
+    #image phonebackground = phonebackgroundimages[phonebackindex]
+
+    $ name_nicole = "nicole"
+    $ name_alexis = "alexis"
+    $ name_cassandra = "cassandra"
+    $ name_irina = "irina"
+
+    $ girl_name = ""
+    $ test_name = ""
+
+    #----- Used for Bonus Nicole Shower Scene - Downstairs Shower -----
+    $ bonusshowernicolelove = False
+    $ bonusshowernicolepussy = False
+    $ bonusshowernicoleass = False
+    image bsnpussyani:
+        "images/edited/showerdownstairs/nic 06a pussy insert 01.png"
+        0.25
+        "images/edited/showerdownstairs/nic 06a pussy insert 02.png"
+        0.25
+        "images/edited/showerdownstairs/nic 06a pussy insert 03.png"
+        0.25
+        "images/edited/showerdownstairs/nic 06a pussy insert 02.png"
+        0.25
+        repeat
+
+    image bsnassani:
+        "images/edited/showerdownstairs/nic 06a ass insert 01.png"
+        0.25
+        "images/edited/showerdownstairs/nic 06a ass insert 02.png"
+        0.25
+        "images/edited/showerdownstairs/nic 06a ass insert 03.png"
+        0.25
+        "images/edited/showerdownstairs/nic 06a ass insert 02.png"
+        0.25
+        repeat
+
+    image bsnrubani:
+        "images/edited/showerdownstairs/nic 06b pussy rub 01.png"
+        0.25
+        "images/edited/showerdownstairs/nic 06b pussy rub 03.png"
+        0.25
+        "images/edited/showerdownstairs/nic 06b pussy rub 01.png"
+        0.25
+        "images/edited/showerdownstairs/nic 06b pussy rub 02.png"
+        0.25
+        repeat
+
+    #----- Used for messenger app -----
+    $ mcreplynicole = 0
+    $ mcnicolereply1 = 0
+    $ mcnicolereply2 = 0
+    $ mcnicolereply3 = 0
+    $ mcnicolereply4 = 0
+
+    #----- Used for Irina Temple Date Love to Cor Scenes -----
+    $ irinadaterewardcheekfirstcor = False
+    $ irinadaterewardfkissfirstcor = False
+    $ irinadaterewarddickgrabfirstcor = False
+    $ irinadaterewardflashfirstcor = False
+    $ irinadaterewardhandjobfirstcor = False
+    $ irinadaterewardblowjobfirstcor = False
+
+    #----- Used to trigger subway darker paths if you choose to not have sex with Nicole on her first date darker path scene -----
+    $ ndate21ntrhelped = False
+
+    #----- Used in fitness scene with kate to determine Love or Corruption path -----
+    $ fitnesskatemood = False
+    $ katemeetgym = False
+
+    #----- Used to toggle spot1000 still picture animations -----
+    $ spot1000anim = False
+
+    #----- Used to track progress of Cass and MC event in Parent's Room -----
+    $ cassandmcparentsroom = False
+    $ mccassandra6pmlove = True
+
+    #----- Used to force a certain Darker Paths -----
+    $ perma_voyeur_alexis = False
+    $ perma_ntr_alexis = False
+    $ perma_revenge_alexis = False
+    $ perma_sadist_alexis = False
+
+    $ perma_voyeur_cassandra = False
+    $ perma_ntr_cassandra = False
+    $ perma_revenge_cassandra = False
+    $ perma_sadist_cassandra = False
+
+    $ perma_voyeur_irina = False
+    $ perma_ntr_irina = False
+    $ perma_revenge_irina = False
+    $ perma_sadist_irina = False
+
+    $ perma_voyeur_nicole = False
+    $ perma_ntr_nicole = False
+    $ perma_revenge_nicole = False
+    $ perma_sadist_nicole = False
+
+    #----- Used for NTR event at 11pm and Midnight - Basement -----
+    $ basement23and24viewed = False
+
+    image nicdavntrslow:
+        "images/edited/anim/saz/nicdav00.png"
+        0.05
+        "images/edited/anim/saz/nicdav01.png"
+        0.05
+        "images/edited/anim/saz/nicdav02.png"
+        0.05
+        "images/edited/anim/saz/nicdav03.png"
+        0.05
+        "images/edited/anim/saz/nicdav04.png"
+        0.05
+        "images/edited/anim/saz/nicdav05.png"
+        0.05
+        "images/edited/anim/saz/nicdav06.png"
+        0.05
+        "images/edited/anim/saz/nicdav07.png"
+        0.05
+        "images/edited/anim/saz/nicdav08.png"
+        0.05
+        "images/edited/anim/saz/nicdav09.png"
+        0.05
+        "images/edited/anim/saz/nicdav10.png"
+        0.05
+        "images/edited/anim/saz/nicdav11.png"
+        0.05
+        "images/edited/anim/saz/nicdav12.png"
+        0.05
+        "images/edited/anim/saz/nicdav13.png"
+        0.05
+        "images/edited/anim/saz/nicdav14.png"
+        0.05
+        "images/edited/anim/saz/nicdav15.png"
+        0.05
+        "images/edited/anim/saz/nicdav16.png"
+        0.05
+        "images/edited/anim/saz/nicdav17.png"
+        0.05
+        "images/edited/anim/saz/nicdav18.png"
+        0.05
+        "images/edited/anim/saz/nicdav19.png"
+        0.05
+        "images/edited/anim/saz/nicdav20.png"
+        0.05
+        "images/edited/anim/saz/nicdav21.png"
+        0.05
+        "images/edited/anim/saz/nicdav22.png"
+        0.05
+        "images/edited/anim/saz/nicdav23.png"
+        0.05
+        "images/edited/anim/saz/nicdav24.png"
+        0.05
+        "images/edited/anim/saz/nicdav25.png"
+        0.05
+        "images/edited/anim/saz/nicdav26.png"
+        0.05
+        "images/edited/anim/saz/nicdav27.png"
+        0.05
+        "images/edited/anim/saz/nicdav28.png"
+        0.05
+        "images/edited/anim/saz/nicdav29.png"
+        0.05
+        "images/edited/anim/saz/nicdav30.png"
+        0.05
+        repeat
+
+    image nicdavntrfast:
+        "images/edited/anim/saz/nicdav00.png"
+        0.05
+        "images/edited/anim/saz/nicdav01.png"
+        0.05
+        "images/edited/anim/saz/nicdav02.png"
+        0.05
+        "images/edited/anim/saz/nicdav03.png"
+        0.05
+        "images/edited/anim/saz/nicdav04.png"
+        0.005
+        "images/edited/anim/saz/nicdav05.png"
+        0.005
+        "images/edited/anim/saz/nicdav06.png"
+        0.005
+        "images/edited/anim/saz/nicdav07.png"
+        0.005
+        "images/edited/anim/saz/nicdav08.png"
+        0.005
+        "images/edited/anim/saz/nicdav09.png"
+        0.005
+        "images/edited/anim/saz/nicdav10.png"
+        0.075
+        "images/edited/anim/saz/nicdav11.png"
+        0.075
+        "images/edited/anim/saz/nicdav12.png"
+        0.05
+        "images/edited/anim/saz/nicdav13.png"
+        0.05
+        "images/edited/anim/saz/nicdav14.png"
+        0.05
+        "images/edited/anim/saz/nicdav15.png"
+        0.05
+        "images/edited/anim/saz/nicdav16.png"
+        0.05
+        "images/edited/anim/saz/nicdav17.png"
+        0.05
+        "images/edited/anim/saz/nicdav18.png"
+        0.05
+        "images/edited/anim/saz/nicdav19.png"
+        0.005
+        "images/edited/anim/saz/nicdav20.png"
+        0.005
+        "images/edited/anim/saz/nicdav21.png"
+        0.005
+        "images/edited/anim/saz/nicdav22.png"
+        0.005
+        "images/edited/anim/saz/nicdav23.png"
+        0.005
+        "images/edited/anim/saz/nicdav24.png"
+        0.005
+        "images/edited/anim/saz/nicdav25.png"
+        0.075
+        "images/edited/anim/saz/nicdav26.png"
+        0.075
+        "images/edited/anim/saz/nicdav27.png"
+        0.05
+        "images/edited/anim/saz/nicdav28.png"
+        0.05
+        "images/edited/anim/saz/nicdav29.png"
+        0.05
+        "images/edited/anim/saz/nicdav30.png"
+        0.05
+        repeat
+
+    #----- Used for getting job at Sleazy Weasel -----
+    $ knowaboutjobsleazy = False
+    $ acceptjobsleazy = False
+
+    #----- Used for tracking Love to Corruption Date sex for Parent's Room event -----
+    $ proom19corsex = False

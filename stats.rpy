@@ -1,3 +1,4 @@
+#----- Edited by S A Z ----- Completed 0.75 Part 1 and 2 Mod A
 
 label stats:
     hide screen locations
@@ -72,7 +73,6 @@ screen stats1():
             else:
                 text "{color=3cff00}No changes{/color}"
     textbutton _("close") xpos 885 ypos 906 action Jump("night")
-
 
 label statshard:
     hide screen locations

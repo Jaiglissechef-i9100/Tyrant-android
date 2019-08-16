@@ -1,6 +1,7 @@
-
+#----- Edited by S A Z ----- Completed 0.75 Part 1 and 2 Mod A
 
 label lroom:
+    #----- Added 0.7 -----
     if activateirinadate == True:
         jump irinadatetemple
     if activateirinalesbian == True:
@@ -25,19 +26,19 @@ label lroom:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    if dtime == 10 and momlove >= 20 and messagenicolelove == 0:
+    if dtime == 10 and momlove >= 20 and messagenicolelove == 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 40 and messagenicolelove == 1:
+    if dtime == 10 and momlove >= 40 and messagenicolelove == 1 and mcreplynicole > 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 60 and messagenicolelove == 2:
+    if dtime == 10 and momlove >= 60 and messagenicolelove == 2 and mcreplynicole > 1: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 80 and messagenicolelove == 3:
+    if dtime == 10 and momlove >= 80 and messagenicolelove == 3 and mcreplynicole > 2: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
@@ -49,6 +50,7 @@ label lroom:
         $ messagepush = True
         $ messageirina = 2
         $ irinanotification += 1
+    #-----
     show screen locations
     if dtime == 7:
         scene main morning living room
@@ -88,42 +90,43 @@ label lroom:
         scene main day living room
     call screen lroom1
 
-
 screen lroom1():
 
-    default tt = Tooltip (" ")
+    default tt = Tooltip ("")
 
-    fixed:
+    hbox xalign .5 yalign .1:
         if dtime == 14:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 818 ypos 507 action (Hide ('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 15 and irinafirstmeet == False or dtime == 15 and irinafirstmeet == True and irinacorruption > 5 or dtime == 15 and irinafirstmeet == True and irinalove > 5 or dtime == 22:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1106 ypos 287 action (Hide ('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 23 and momrelationship >= 6 and lroom10mcwin == True:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1106 ypos 287 action (Hide ('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 8:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1145 ypos 401 action (Hide ('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 10 and kitchen9mix == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1145 ypos 401 action (Hide ('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 21 and frontdoorddfirst == True and basementkey == False or dtime == 21 and gangmemberaccept >= 1 and basementkey == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 875 ypos 293 action (Hide ('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('lroom1'), Jump('lroom8momicon')) hovered tt.Action ("Interact") focus_mask True
+        #----- Custom ----- Added so the basementgo scene can be repeated
+        if dtime == 21 and frontdoorddfirst == True and basementkey == True or dtime == 21 and gangmemberaccept >= 1 and basementkey == True:
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('lroom1'), Jump('basementgo_landing')) hovered tt.Action ("Interact") focus_mask True
 
-
-        frame:
-            xalign .5
-            text tt.value
-
-
-
+    frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
+        xalign .5
+        text tt.value
 
 label droom:
+    #----- Added 0.7 -----
     if activateirinadate == True:
         jump irinadatetemple
     if activateirinalesbian == True:
         jump lesbiandate
     if activateirinalesbianntr == True:
         jump lesbiandatentr
-    $ roomlroom = False
-    $ roomdroom = True
+    $ roomlroom = True
+    $ roomdroom = False
     $ roomkitchen = False
     $ roomalexis = False
     $ roomcassandra = False
@@ -140,19 +143,19 @@ label droom:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    if dtime == 10 and momlove >= 20 and messagenicolelove == 0:
+    if dtime == 10 and momlove >= 20 and messagenicolelove == 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 40 and messagenicolelove == 1:
+    if dtime == 10 and momlove >= 40 and messagenicolelove == 1 and mcreplynicole > 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 60 and messagenicolelove == 2:
+    if dtime == 10 and momlove >= 60 and messagenicolelove == 2 and mcreplynicole > 1: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 80 and messagenicolelove == 3:
+    if dtime == 10 and momlove >= 80 and messagenicolelove == 3 and mcreplynicole > 2: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
@@ -164,6 +167,7 @@ label droom:
         $ messagepush = True
         $ messageirina = 2
         $ irinanotification += 1
+    #-----
     show screen locations
     if dtime == 7:
         scene main 7am dining room
@@ -212,31 +216,29 @@ label droom:
     call screen droom1
 
 screen droom1():
+    default tt = Tooltip ("")
 
-    default tt = Tooltip (" ")
-
-    fixed:
+    hbox xalign .5 yalign .1:
         if dtime == 7 or dtime == 12 or dtime == 13 or dtime == 18:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 757 ypos 326 action (Hide ('droom1'), Jump('droom7momicon')) hovered tt.Action ("Interact") focus_mask True
-
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('droom1'), Jump('droom7momicon')) hovered tt.Action ("Interact") focus_mask True
 
     frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
         xalign .5
         text tt.value
 
-
-
-
 label kitchen:
+    #----- Added 0.7 -----
     if activateirinadate == True:
         jump irinadatetemple
     if activateirinalesbian == True:
         jump lesbiandate
     if activateirinalesbianntr == True:
         jump lesbiandatentr
-    $ roomlroom = False
+    $ roomlroom = True
     $ roomdroom = False
-    $ roomkitchen = True
+    $ roomkitchen = False
     $ roomalexis = False
     $ roomcassandra = False
     $ roommc = False
@@ -252,19 +254,19 @@ label kitchen:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    if dtime == 10 and momlove >= 20 and messagenicolelove == 0:
+    if dtime == 10 and momlove >= 20 and messagenicolelove == 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 40 and messagenicolelove == 1:
+    if dtime == 10 and momlove >= 40 and messagenicolelove == 1 and mcreplynicole > 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 60 and messagenicolelove == 2:
+    if dtime == 10 and momlove >= 60 and messagenicolelove == 2 and mcreplynicole > 1: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 80 and messagenicolelove == 3:
+    if dtime == 10 and momlove >= 80 and messagenicolelove == 3 and mcreplynicole > 2: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
@@ -276,12 +278,14 @@ label kitchen:
         $ messagepush = True
         $ messageirina = 2
         $ irinanotification += 1
+    #-----
     show screen locations
     if dtime == 7:
         scene main day kitchen
-    elif dtime == 8 and showerup7amextyes == False:
+    elif dtime == 8 and showerup7amextyes == False: #----- added and showerup7amextyes == False: ----- 0.75 Part 2 ----- Unfinished
         scene main 8am kitchen
-    elif dtime == 9 and gangmember == True:
+    #elif dtime == 9 and gangmember == True and basecasfirst == False or basecassecond == True and dtime == 9:
+    elif dtime == 9 and gangmember == True and basecasfirst == False and basementkey == True: #----- added and basecasfirst == False ----- there is an option to repeat it in dialogue choices later
         jump casbasement
     elif dtime == 9 and d5rccor == True or d5rccorfuck == True or d5rcbjsw == True or d5rcbjout == True or d5rcbjdt == True:
         jump casreacdatecor
@@ -314,38 +318,37 @@ label kitchen:
     call screen kitchen1
 
 screen kitchen1():
+    default tt = Tooltip ("")
 
-    default tt = Tooltip (" ")
-
-    fixed:
+    hbox xalign .5 yalign .1:
         if dtime == 8:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1191 ypos 250 action (Hide ('kitchen1'), Jump('kitchen8lsisicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('kitchen1'), Jump('kitchen8lsisicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 9 and d5rccor == False and d5rccorfuck == False and d5rcbjsw == False and d5rcbjout == False and d5rcbjdt == False and d5rclove == False and d5rclovef == False and d5rclovem == False and d5rcntr == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1191 ypos 250 action (Hide ('kitchen1'), Jump('kitchen8lsisicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('kitchen1'), Jump('kitchen8lsisicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 11:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 989 ypos 366 action (Hide ('kitchen1'), Jump('kitchen8lsisicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('kitchen1'), Jump('kitchen8lsisicon')) hovered tt.Action ("Interact") focus_mask True
 
         if dtime == 19:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 989 ypos 366 action (Hide ('kitchen1'), Jump('kitchen8lsisicon')) hovered tt.Action ("Interact") focus_mask True
-
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('kitchen1'), Jump('kitchen8lsisicon')) hovered tt.Action ("Interact") focus_mask True
 
     frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
         xalign .5
         text tt.value
 
-
-
 label lsisroom:
+    #----- Added 0.7 -----
     if activateirinadate == True:
         jump irinadatetemple
     if activateirinalesbian == True:
         jump lesbiandate
     if activateirinalesbianntr == True:
         jump lesbiandatentr
-    $ roomlroom = False
+    $ roomlroom = True
     $ roomdroom = False
     $ roomkitchen = False
-    $ roomalexis = True
+    $ roomalexis = False
     $ roomcassandra = False
     $ roommc = False
     $ roomshowerup = False
@@ -360,19 +363,19 @@ label lsisroom:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    if dtime == 10 and momlove >= 20 and messagenicolelove == 0:
+    if dtime == 10 and momlove >= 20 and messagenicolelove == 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 40 and messagenicolelove == 1:
+    if dtime == 10 and momlove >= 40 and messagenicolelove == 1 and mcreplynicole > 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 60 and messagenicolelove == 2:
+    if dtime == 10 and momlove >= 60 and messagenicolelove == 2 and mcreplynicole > 1: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 80 and messagenicolelove == 3:
+    if dtime == 10 and momlove >= 80 and messagenicolelove == 3 and mcreplynicole > 2: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
@@ -384,13 +387,14 @@ label lsisroom:
         $ messagepush = True
         $ messageirina = 2
         $ irinanotification += 1
+    #-----
     show screen locations
     if dtime == 7 or dtime == 8:
         scene main lil sis room morning
     elif dtime == 14 and lilsisrelationship >= 6:
         scene main 2pm floor
     elif dtime == 21:
-        scene main 9pm lil sis room
+        scene main room upstairs #scene main 9pm lil sis room
     elif dtime == 23 and lilsisrelationship >= 6 or dtime == 24 or dtime == 25 or dtime == 2 or dtime == 3:
         scene main room upstairs
     elif dtime == 22:
@@ -405,37 +409,35 @@ label lsisroom:
     call screen lsisroom1
 
 screen lsisroom1():
+    default tt = Tooltip ("")
 
-    default tt = Tooltip (" ")
-
-    fixed:
+    hbox xalign .5 yalign .1:
         if dtime == 23 or dtime == 24:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1022 ypos 363 action (Hide ('lsisroom1'), Jump('lsisroomicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('lsisroom1'), Jump('lsisroomicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 21 or dtime == 14 and lilsisrelationship >= 6:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 746 ypos 260 action (Hide ('lsisroom1'), Jump('lsisroomicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('lsisroom1'), Jump('lsisroomicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 22:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 989 ypos 366 action (Hide ('lsisroom1'), Jump('lsisroomicon')) hovered tt.Action ("Interact") focus_mask True
-
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('lsisroom1'), Jump('lsisroomicon')) hovered tt.Action ("Interact") focus_mask True
 
     frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
         xalign .5
         text tt.value
 
-
-
-
 label bsisroom:
+    #----- Added 0.7 -----
     if activateirinadate == True:
         jump irinadatetemple
     if activateirinalesbian == True:
         jump lesbiandate
     if activateirinalesbianntr == True:
         jump lesbiandatentr
-    $ roomlroom = False
+    $ roomlroom = True
     $ roomdroom = False
     $ roomkitchen = False
     $ roomalexis = False
-    $ roomcassandra = True
+    $ roomcassandra = False
     $ roommc = False
     $ roomshowerup = False
     $ roomshowerdown = False
@@ -449,19 +451,19 @@ label bsisroom:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    if dtime == 10 and momlove >= 20 and messagenicolelove == 0:
+    if dtime == 10 and momlove >= 20 and messagenicolelove == 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 40 and messagenicolelove == 1:
+    if dtime == 10 and momlove >= 40 and messagenicolelove == 1 and mcreplynicole > 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 60 and messagenicolelove == 2:
+    if dtime == 10 and momlove >= 60 and messagenicolelove == 2 and mcreplynicole > 1: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 80 and messagenicolelove == 3:
+    if dtime == 10 and momlove >= 80 and messagenicolelove == 3 and mcreplynicole > 2: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
@@ -473,6 +475,7 @@ label bsisroom:
         $ messagepush = True
         $ messageirina = 2
         $ irinanotification += 1
+    #-----
     show screen locations
     if dtime == 15 and irinafirstmeet == False:
         hide screen locations
@@ -484,33 +487,32 @@ label bsisroom:
     call screen bsisroom1
 
 screen bsisroom1():
+    default tt = Tooltip ("")
 
-    default tt = Tooltip (" ")
-
-    fixed:
+    hbox xalign .5 yalign .1:
         if dtime == 7 or dtime == 8 or dtime == 14 or dtime == 23 or dtime == 24:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1022 ypos 363 action (Hide ('bsisroom1'), Jump('bsis78icon')) hovered tt.Action ("Interact") focus_mask True
-
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('bsisroom1'), Jump('bsis78icon')) hovered tt.Action ("Interact") focus_mask True
 
     frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
         xalign .5
         text tt.value
 
-
-
 label mcroom:
+    #----- Added 0.7 -----
     if activateirinadate == True:
         jump irinadatetemple
     if activateirinalesbian == True:
         jump lesbiandate
     if activateirinalesbianntr == True:
         jump lesbiandatentr
-    $ roomlroom = False
+    $ roomlroom = True
     $ roomdroom = False
     $ roomkitchen = False
     $ roomalexis = False
     $ roomcassandra = False
-    $ roommc = True
+    $ roommc = False
     $ roomshowerup = False
     $ roomshowerdown = False
     $ roomfrontdoor = False
@@ -523,19 +525,19 @@ label mcroom:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    if dtime == 10 and momlove >= 20 and messagenicolelove == 0:
+    if dtime == 10 and momlove >= 20 and messagenicolelove == 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 40 and messagenicolelove == 1:
+    if dtime == 10 and momlove >= 40 and messagenicolelove == 1 and mcreplynicole > 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 60 and messagenicolelove == 2:
+    if dtime == 10 and momlove >= 60 and messagenicolelove == 2 and mcreplynicole > 1: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 80 and messagenicolelove == 3:
+    if dtime == 10 and momlove >= 80 and messagenicolelove == 3 and mcreplynicole > 2: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
@@ -547,13 +549,16 @@ label mcroom:
         $ messagepush = True
         $ messageirina = 2
         $ irinanotification += 1
+    #-----
     show screen locations
     if dtime == 7 or dtime == 8:
         scene main mc room morning
     elif dtime == 17 and setupnopron == False and setuppron == False and vdroom13lilsisbetlost == True:
         scene main 5pm mc room a
+        call screen mcroom2
     elif dtime == 17 and setupnopron == True and vdroom13lilsisbetlost == True or dtime == 17 and setuppron == True and vdroom13lilsisbetlost == True:
         scene main 5pm mc room b
+        call screen mcroom2
     elif dtime == 15 and irinafirstmeet == False:
         hide screen locations
         scene main 3pm living room
@@ -564,34 +569,63 @@ label mcroom:
     call screen mcroom1
 
 screen mcroom1():
-
-    default tt = Tooltip (" ")
+    default tt = Tooltip ("")
 
     fixed:
-        imagebutton auto "gui/icons/icon_action_%s.png" xpos 882 ypos 450 action (Hide ('mcroom1'), Jump('mcroomicon')) hovered tt.Action ("Interact") focus_mask True
-
+        #imagebutton auto "gui/icons/icon_action_%s.png" xpos 882 ypos 450 action (Hide('mcroom1'), Jump('mcroomicon')) hovered tt.Action ("Interact") focus_mask True
+        #----- Custom Menu Buttons -----
+        imagebutton auto "images/edited/main/icon_picturemenu_%s.png" xpos 632 ypos 291 action (Hide('mcroom1'), Jump('mcroompictureicon')) hovered tt.Action ("Dating Menu") focus_mask True
+        if dtime == 7 or dtime == 8 or dtime == 9:
+            imagebutton auto "images/edited/main/icon_bagmornmenu_%s.png" xpos 1037 ypos 712 action (Hide('mcroom1'), Jump('mcroombagicon')) hovered tt.Action ("Options Menu") focus_mask True
+            imagebutton auto "images/edited/main/icon_drawermenu_%s.png" xpos 1672 ypos 616 action (Hide('mcroom1'), Jump('mcroomdrawericon')) hovered tt.Action ("Clothing Menu") focus_mask True
+        else:
+            imagebutton auto "images/edited/main/icon_bagdaymenu_%s.png" xpos 1037 ypos 712 action (Hide('mcroom1'), Jump('mcroombagicon')) hovered tt.Action ("Options Menu") focus_mask True
+            imagebutton auto "images/edited/main/icon_drawerdaymenu_%s.png" xpos 1672 ypos 616 action (Hide('mcroom1'), Jump('mcroomdrawericon')) hovered tt.Action ("Clothing Menu") focus_mask True
+        imagebutton auto "images/edited/main/icon_laptopmenu_%s.png" xpos 693 ypos 538 action (Hide('mcroom1'), Jump('mcroomlaptopicon')) hovered tt.Action ("Cheat Menu") focus_mask True
 
     frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
         xalign .5
         text tt.value
 
+screen mcroom2():
+    default tt = Tooltip ("")
 
+    hbox xalign .5 yalign .1:
+        #imagebutton auto "gui/icons/icon_action_%s.png" xpos 882 ypos 450 action (Hide('mcroom1'), Jump('mcroomicon')) hovered tt.Action ("Interact") focus_mask True
+        #----- Custom Menu Buttons -----
+        imagebutton auto "gui/icons/icon_feet_%s.png" action (Hide('mcroom2'), Jump('mcroompictureicon')) hovered tt.Action ("Dating Menu") focus_mask True
+        imagebutton auto "gui/icons/icon_tickle_%s.png" action (Hide('mcroom2'), Jump('mcroombagicon')) hovered tt.Action ("Options Menu") focus_mask True
+        imagebutton auto "gui/icons/icon_head_%s.png" action (Hide('mcroom2'), Jump('mcroomdrawericon')) hovered tt.Action ("Clothing Menu") focus_mask True
+        imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('mcroom2'), Jump('mcroomlaptopicon')) hovered tt.Action ("Cheat Menu") focus_mask True
 
+    frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
+        xalign .5
+        yalign .23
+        xanchor .5
+        yanchor .23
+        yfill True
+        ymaximum 63
+        text tt.value
 
 label showerup:
+    #----- Added 0.7 -----
     if activateirinadate == True:
         jump irinadatetemple
     if activateirinalesbian == True:
         jump lesbiandate
     if activateirinalesbianntr == True:
         jump lesbiandatentr
-    $ roomlroom = False
+    $ roomlroom = True
     $ roomdroom = False
     $ roomkitchen = False
     $ roomalexis = False
     $ roomcassandra = False
     $ roommc = False
-    $ roomshowerup = True
+    $ roomshowerup = False
     $ roomshowerdown = False
     $ roomfrontdoor = False
     $ roombasement = False
@@ -603,19 +637,19 @@ label showerup:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    if dtime == 10 and momlove >= 20 and messagenicolelove == 0:
+    if dtime == 10 and momlove >= 20 and messagenicolelove == 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 40 and messagenicolelove == 1:
+    if dtime == 10 and momlove >= 40 and messagenicolelove == 1 and mcreplynicole > 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 60 and messagenicolelove == 2:
+    if dtime == 10 and momlove >= 60 and messagenicolelove == 2 and mcreplynicole > 1: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 80 and messagenicolelove == 3:
+    if dtime == 10 and momlove >= 80 and messagenicolelove == 3 and mcreplynicole > 2: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
@@ -627,6 +661,7 @@ label showerup:
         $ messagepush = True
         $ messageirina = 2
         $ irinanotification += 1
+    #-----
     show screen locations
     if dtime == 7 or dtime == 20 or dtime == 22:
         scene main shower door upstairs
@@ -642,35 +677,34 @@ label showerup:
     call screen showerup1
 
 screen showerup1():
+    default tt = Tooltip ("")
 
-    default tt = Tooltip (" ")
-
-    fixed:
+    hbox xalign .5 yalign .1:
         if dtime == 7 or dtime == 20 or dtime == 22 or dtime == 15 and sp2pmextend == True:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1022 ypos 363 action (Hide ('showerup1'), Jump('showerup7icon')) hovered tt.Action ("Interact") focus_mask True
-
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('showerup1'), Jump('showerup7icon')) hovered tt.Action ("Interact") focus_mask True
 
     frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
         xalign .5
         text tt.value
 
-
-
 label showerdown:
+    #----- Added 0.7 -----
     if activateirinadate == True:
         jump irinadatetemple
     if activateirinalesbian == True:
         jump lesbiandate
     if activateirinalesbianntr == True:
         jump lesbiandatentr
-    $ roomlroom = False
+    $ roomlroom = True
     $ roomdroom = False
     $ roomkitchen = False
     $ roomalexis = False
     $ roomcassandra = False
     $ roommc = False
     $ roomshowerup = False
-    $ roomshowerdown = True
+    $ roomshowerdown = False
     $ roomfrontdoor = False
     $ roombasement = False
     $ roomparents = False
@@ -681,19 +715,19 @@ label showerdown:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    if dtime == 10 and momlove >= 20 and messagenicolelove == 0:
+    if dtime == 10 and momlove >= 20 and messagenicolelove == 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 40 and messagenicolelove == 1:
+    if dtime == 10 and momlove >= 40 and messagenicolelove == 1 and mcreplynicole > 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 60 and messagenicolelove == 2:
+    if dtime == 10 and momlove >= 60 and messagenicolelove == 2 and mcreplynicole > 1: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 80 and messagenicolelove == 3:
+    if dtime == 10 and momlove >= 80 and messagenicolelove == 3 and mcreplynicole > 2: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
@@ -705,6 +739,7 @@ label showerdown:
         $ messagepush = True
         $ messageirina = 2
         $ irinanotification += 1
+    #-----
     show screen locations
     if dtime == 10 and kitchen9mix == True:
         scene main shower door downstairs
@@ -720,35 +755,36 @@ label showerdown:
     call screen showerdown1
 
 screen showerdown1():
+    default tt = Tooltip ("")
 
-    default tt = Tooltip (" ")
-
-    fixed:
+    hbox xalign .5 yalign .1:
         if dtime == 10 and kitchen9mix == True:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 950 ypos 360 action (Hide ('showerdown1'), Jump('showerdownicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('showerdown1'), Jump('showerdownicon')) hovered tt.Action ("Interact") focus_mask True
 
         if dtime == 15:
-            if momrelationship <= 5 and NTR == True:
-                imagebutton auto "gui/icons/icon_action_%s.png" xpos 950 ypos 360 action (Hide ('showerdown1'), Jump('showerdownicon')) hovered tt.Action ("Interact") focus_mask True
+            #----- Edited -----
+            if momrelationship <= 5 and NTR == True or hardntr == True:
+                imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('showerdown1'), Jump('showerdownicon')) hovered tt.Action ("Interact") focus_mask True
             elif momrelationship >= 6:
-                imagebutton auto "gui/icons/icon_action_%s.png" xpos 950 ypos 360 action (Hide ('showerdown1'), Jump('showerdownicon')) hovered tt.Action ("Interact") focus_mask True
+                imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('showerdown1'), Jump('showerdownicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 7 and momdrugfirst == True and momsecret == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 950 ypos 360 action (Hide ('showerdown1'), Jump('nicolesecret')) hovered tt.Action ("What's happening?") focus_mask True
-
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('showerdown1'), Jump('nicolesecret')) hovered tt.Action ("What's happening?") focus_mask True
 
     frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
         xalign .5
         text tt.value
 
-
 label frontdoor:
+    #----- Added 0.7 -----
     if activateirinadate == True:
         jump irinadatetemple
     if activateirinalesbian == True:
         jump lesbiandate
     if activateirinalesbianntr == True:
         jump lesbiandatentr
-    $ roomlroom = False
+    $ roomlroom = True
     $ roomdroom = False
     $ roomkitchen = False
     $ roomalexis = False
@@ -756,7 +792,7 @@ label frontdoor:
     $ roommc = False
     $ roomshowerup = False
     $ roomshowerdown = False
-    $ roomfrontdoor = True
+    $ roomfrontdoor = False
     $ roombasement = False
     $ roomparents = False
     $ roomtown = False
@@ -766,19 +802,19 @@ label frontdoor:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    if dtime == 10 and momlove >= 20 and messagenicolelove == 0:
+    if dtime == 10 and momlove >= 20 and messagenicolelove == 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 40 and messagenicolelove == 1:
+    if dtime == 10 and momlove >= 40 and messagenicolelove == 1 and mcreplynicole > 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 60 and messagenicolelove == 2:
+    if dtime == 10 and momlove >= 60 and messagenicolelove == 2 and mcreplynicole > 1: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 80 and messagenicolelove == 3:
+    if dtime == 10 and momlove >= 80 and messagenicolelove == 3 and mcreplynicole > 2: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
@@ -790,6 +826,7 @@ label frontdoor:
         $ messagepush = True
         $ messageirina = 2
         $ irinanotification += 1
+    #-----
     show screen locations
     if dtime == 7 or dtime == 8:
         scene main morning front door
@@ -809,32 +846,31 @@ label frontdoor:
     call screen frontdoor1
 
 screen frontdoor1():
+    default tt = Tooltip ("")
 
-    default tt = Tooltip (" ")
-
-    fixed:
+    hbox xalign .5 yalign .1:
         if dtime == 20 and frontdoorddfirst == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 989 ypos 366 action (Hide ('frontdoor1'), Jump('frontdooricon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('frontdoor1'), Jump('frontdooricon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 13 and d5rccorfuck == False and d5rcbjsw == False and d5rcbjout == False and d5rcbjdt == False and d5rclovef == False and d5rcntr == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1106 ypos 287 action (Hide ('frontdoor1'), Jump('frontdooricon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('frontdoor1'), Jump('frontdooricon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 21 and irinafirstmeet == True and club20extend == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 944 ypos 150 action (Hide ('frontdoor1'), Jump('frontdooricon')) hovered tt.Action ("Interact") focus_mask True
-
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('frontdoor1'), Jump('frontdooricon')) hovered tt.Action ("Interact") focus_mask True
 
     frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
         xalign .5
         text tt.value
 
-
-
 label basement:
+    #----- Added 0.7 -----
     if activateirinadate == True:
         jump irinadatetemple
     if activateirinalesbian == True:
         jump lesbiandate
     if activateirinalesbianntr == True:
         jump lesbiandatentr
-    $ roomlroom = False
+    $ roomlroom = True
     $ roomdroom = False
     $ roomkitchen = False
     $ roomalexis = False
@@ -843,7 +879,7 @@ label basement:
     $ roomshowerup = False
     $ roomshowerdown = False
     $ roomfrontdoor = False
-    $ roombasement = True
+    $ roombasement = False
     $ roomparents = False
     $ roomtown = False
     $ roomtanning = False
@@ -852,19 +888,19 @@ label basement:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    if dtime == 10 and momlove >= 20 and messagenicolelove == 0:
+    if dtime == 10 and momlove >= 20 and messagenicolelove == 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 40 and messagenicolelove == 1:
+    if dtime == 10 and momlove >= 40 and messagenicolelove == 1 and mcreplynicole > 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 60 and messagenicolelove == 2:
+    if dtime == 10 and momlove >= 60 and messagenicolelove == 2 and mcreplynicole > 1: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 80 and messagenicolelove == 3:
+    if dtime == 10 and momlove >= 80 and messagenicolelove == 3 and mcreplynicole > 2: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
@@ -876,6 +912,7 @@ label basement:
         $ messagepush = True
         $ messageirina = 2
         $ irinanotification += 1
+    #-----
     show screen locations
     if dtime == 15 and irinafirstmeet == False:
         hide screen locations
@@ -887,51 +924,65 @@ label basement:
     call screen basement1
 
 screen basement1():
+    default tt = Tooltip ("")
 
-    default tt = Tooltip (" ")
+    hbox xalign .5 yalign .1:
 
-    fixed:
-
-        if dtime == 23 and NTR == True and momrelationship < 6 and momntr == True:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1274 ypos 390 action (Hide ('basement1'), Jump('basementicon')) hovered tt.Action ("Interact") focus_mask True
-
-        if dtime == 24 and NTR == True and momrelationship < 6 and momntr == True:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1274 ypos 390 action (Hide ('basement1'), Jump('basementicon')) hovered tt.Action ("Interact") focus_mask True
-        if dtime == 23 and lroom10mcwin == True and gangmember == True and momlove >= 50 or dtime == 23 and lroom10mcwin == True and gangmember == True and momcorruption >= 30:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1274 ypos 390 action (Hide ('basement1'), Jump('base10pmnic')) hovered tt.Action ("Enter the basement") focus_mask True
+        #----- Edited -----
+        if dtime == 23 and NTR == True and momrelationship < 6 or dtime == 23 and hardntr == True:
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('basementicon')) hovered tt.Action ("Interact") focus_mask True
+        #----- Edited -----
+        if dtime == 24 and NTR == True and momrelationship < 6 or dtime == 24 and hardntr == True:
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('basementicon')) hovered tt.Action ("Interact") focus_mask True
+        #----- custom -----
+        if dtime == 20 and NTR == True and bigsisrelationship <= 5 and basementkey == True or dtime == 20 and hardntr == True and basementkey == True:
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('basementicon')) hovered tt.Action ("Interact") focus_mask True
+        #----- Moved to Living room during the momkissing options. Must have played that scene once - then have momlove >= 50 or momcorruption >= 30 and be a gangmember -----
+        #if dtime == 23 and lroom10mcwin == True and gangmember == True and momlove >=50 or dtime == 23 and lroom10mcwin == True and gangmember == True and momcorruption >= 30:
+            #imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('base10pmnic')) hovered tt.Action ("Enter the basement") focus_mask True
         if dtime == 16 and gangmember == True and selldrugs == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1274 ypos 390 action (Hide ('basement1'), Jump('sellingdrugs1')) hovered tt.Action ("Enter the basement") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('sellingdrugs1')) hovered tt.Action ("Enter the basement") focus_mask True
         if dtime == 16 and gangmember == True and selldrugs == True:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1274 ypos 390 action (Hide ('basement1'), Jump('sellingdrugs2')) hovered tt.Action ("Enter the basement") focus_mask True
-        if dtime == 17 and gangmember == True and basecasfirst == True and NTR == True:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1274 ypos 390 action (Hide ('basement1'), Jump('casbasementntr')) hovered tt.Action ("Enter the basement") focus_mask True
-        if dtime == 22 and gangmember == True and mombasementcorsecond == True and basement10pmnicoleouting == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1274 ypos 390 action (Hide ('basement1'), Jump('basementnicoleoutingcorruption')) hovered tt.Action ("Enter the basement with [mother]") focus_mask True
-        if dtime == 22 and gangmember == True and mombasementlovesecond == True and momlove > momcorruption and basement10pmnicoleouting == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1274 ypos 390 action (Hide ('basement1'), Jump('basementnicoleoutinglove')) hovered tt.Action ("Enter the basement with [mother]") focus_mask True
-        if dtime == 22 and gangmember == True and basecassecond == True and basement10cassandraouting == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1074 ypos 390 action (Hide ('basement1'), Jump('basementcassandraoutingcorruption')) hovered tt.Action ("Enter the basement with [bs]") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('sellingdrugs2')) hovered tt.Action ("Enter the basement") focus_mask True
+        #----- Edited -----
+        if dtime == 17 and gangmember == True and basecasfirst == True and NTR == True and bigsisrelationship < 6 or dtime == 17 and gangmember == True and basecasfirst == True and hardntr == True:
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('casbasementntr')) hovered tt.Action ("Enter the basement") focus_mask True
+        #if dtime == 22 and gangmember == True and mombasementcorsecond == True and basement10pmnicoleouting == False:
+            #imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('basementnicoleoutingcorruption')) hovered tt.Action ("Enter the basement with [mother]") focus_mask True
+            #imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('basementnicoleoutinglanding')) hovered tt.Action ("Enter the basement with [mother]") focus_mask True
+        if dtime == 22 and gangmember == True and mombasementlovesecond == True and basement10pmnicoleouting == False or dtime == 22 and gangmember == True and mombasementcorsecond == True and basement10pmnicoleouting == False: #removed and momlove > momcorruption
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide ('basement1'), Jump('basementnicoleoutinglanding')) hovered tt.Action ("Enter the basement with [mother]") focus_mask True
+        if dtime == 22 and gangmember == True and basecassecond == True and basement10cassandraouting == False and basement10pmnicoleouting == True: #added and basement10pmnicoleouting == True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('basementcassandraoutingcorlovemenu')) hovered tt.Action ("Enter the basement with [bs]") focus_mask True
         if dtime == 22 and gangmember == True and basecassecond == True and basement10cassandraouting == False and basement10pmnicoleouting == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1074 ypos 390 action (Hide ('basement1'), Jump('basementcassandraoutingcorruptionfail')) hovered tt.Action ("Enter the basement with [bs]") focus_mask True
+            #imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('basementcassandraoutingcorruptionfail')) hovered tt.Action ("Enter the basement with [bs]") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('basementcassandraoutingfaillanding')) hovered tt.Action ("Enter the basement with [bs]") focus_mask True
+        #----- Custom Repeat Options -----
+        if dtime == 22 and gangmember == True and mombasementcorsecond == True and basement10pmnicoleouting == True or dtime == 22 and gangmember == True and mombasementlovesecond == True and basement10pmnicoleouting == True:
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('basementnicoleoutinglanding')) hovered tt.Action ("Enter the basement with [mother] (Repeat)") focus_mask True
+        if dtime == 22 and gangmember == True and basecassecond == True and basement10cassandraouting == True and basement10pmnicoleouting == True: #added and basement10pmnicoleouting == True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('basement1'), Jump('basementcassandraoutingcorlovemenu')) hovered tt.Action ("Enter the basement with [bs] (Repeat)") focus_mask True
+        if dtime == 22 and gangmember == True and basecassecond == True and basement10cassandraouting == True and basement10pmnicoleouting == True:
+            imagebutton auto "gui/icons/icon_disapprove_%s.png" action (Hide('basement1'), Jump('basementcassandraoutingfaillanding')) hovered tt.Action ("Enter the basement with [bs] (Fail Repeat)") focus_mask True
+        #----- 0.75 Part 1 event -----
         if dtime == 22 and gangmember == True and basement10cassandraouting == True and basement10pmnicoleouting == True:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1174 ypos 490 action (Hide ('basement1'), Jump('baseorgystart')) hovered tt.Action ("Join the orgy") focus_mask True
-
-
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide ('basement1'), Jump('baseorgystart')) hovered tt.Action ("Join the orgy") focus_mask True
 
     frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
         xalign .5
         text tt.value
 
-
-
 label parentsroom:
+    #----- Added 0.7 -----
     if activateirinadate == True:
         jump irinadatetemple
     if activateirinalesbian == True:
         jump lesbiandate
     if activateirinalesbianntr == True:
         jump lesbiandatentr
-    $ roomlroom = False
+    $ roomlroom = True
     $ roomdroom = False
     $ roomkitchen = False
     $ roomalexis = False
@@ -941,7 +992,7 @@ label parentsroom:
     $ roomshowerdown = False
     $ roomfrontdoor = False
     $ roombasement = False
-    $ roomparents = True
+    $ roomparents = False
     $ roomtown = False
     $ roomtanning = False
     $ roomsubway = False
@@ -949,19 +1000,19 @@ label parentsroom:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    if dtime == 10 and momlove >= 20 and messagenicolelove == 0:
+    if dtime == 10 and momlove >= 20 and messagenicolelove == 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 40 and messagenicolelove == 1:
+    if dtime == 10 and momlove >= 40 and messagenicolelove == 1 and mcreplynicole > 0: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 60 and messagenicolelove == 2:
+    if dtime == 10 and momlove >= 60 and messagenicolelove == 2 and mcreplynicole > 1: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
-    if dtime == 10 and momlove >= 80 and messagenicolelove == 3:
+    if dtime == 10 and momlove >= 80 and messagenicolelove == 3 and mcreplynicole > 2: #----- added - and myreplynicole == -----
         $ messagepush = True
         $ messagenicolelove += 1
         $ nicolenotification += 1
@@ -973,10 +1024,15 @@ label parentsroom:
         $ messagepush = True
         $ messageirina = 2
         $ irinanotification += 1
+    #-----
     show screen locations
-    if dtime == 19 and basement10pmnicoleouting == False:
-        scene main 7pm parents room
-    if dtime == 19 and basement10pmnicoleouting == True and proom19first == False:
+    if dtime == 19:
+        if basement10pmnicoleouting == True:
+            scene edited parentsroom nosexbruce
+        else:
+            scene main 7pm parents room
+    #----- 0.75 Part 1 event -----
+    if dtime == 19 and basement10pmnicoleouting == True and proom19first == False: # mix this into the above if else statement
         scene main parents room door
     elif dtime == 20:
         scene main 8pm parents room
@@ -992,30 +1048,31 @@ label parentsroom:
     call screen parentsroom1
 
 screen parentsroom1():
+    default tt = Tooltip ("")
 
-    default tt = Tooltip (" ")
-
-    fixed:
+    hbox xalign .5 yalign .1:
+        if dtime == 18 and caslovefirstfuck == True:
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('parentsroom1'), Jump('parentsroomicon')) hovered tt.Action ("Interact") focus_mask True
+        if dtime == 19:
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('parentsroom1'), Jump('parentsroomicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 20:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 942 ypos 267 action (Hide ('parentsroom1'), Jump('parentsroomicon')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('parentsroom1'), Jump('parentsroomicon')) hovered tt.Action ("Interact") focus_mask True
         if dtime == 24 and momrelationship >= 6 and lroom10mcwin == True:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 1022 ypos 363 action (Hide ('parentsroom1'), Jump('parentsroomicon')) hovered tt.Action ("Interact") focus_mask True
-        if dtime == 19 and basement10pmnicoleouting == False:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 746 ypos 260 action (Hide ('parentsroom1'), Jump('parentsroomicon')) hovered tt.Action ("Interact") focus_mask True
-        if dtime == 19 and basement10pmnicoleouting == True and proom19first == False and momcorruption >= momlove:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 946 ypos 460 action (Hide ('parentsroom1'), Jump('proom19extcorruption')) hovered tt.Action ("Interact") focus_mask True
-        if dtime == 19 and basement10pmnicoleouting == True and proom19first == False and momcorruption < momlove:
-            imagebutton auto "gui/icons/icon_action_%s.png" xpos 946 ypos 460 action (Hide ('parentsroom1'), Jump('proom19extlove')) hovered tt.Action ("Interact") focus_mask True
+            imagebutton auto "gui/icons/icon_action_%s.png" action (Hide('parentsroom1'), Jump('parentsroomicon')) hovered tt.Action ("Interact") focus_mask True
+        #----- 0.75 Part 1 events ----- Using parentsroomicon to move here instead
+        #if dtime == 19 and basement10pmnicoleouting == True and proom19first == False and momcorruption >= momlove:
+            #imagebutton auto "gui/icons/icon_action_%s.png" xpos 946 ypos 460 action (Hide ('parentsroom1'), Jump('proom19extcorruption')) hovered tt.Action ("Interact") focus_mask True
+        #if dtime == 19 and basement10pmnicoleouting == True and proom19first == False and momcorruption < momlove:
+            #imagebutton auto "gui/icons/icon_action_%s.png" xpos 946 ypos 460 action (Hide ('parentsroom1'), Jump('proom19extlove')) hovered tt.Action ("Interact") focus_mask True
 
     frame:
+        if tt.value == "" or tt.value ==" ":
+            background None
         xalign .5
         text tt.value
 
-
-
-
 label skip:
-    show screen dlhs
+    show screen dlhs # added 0.75 Part 1
     $ roomlroom = False
     $ roomdroom = False
     $ roomkitchen = False
@@ -1034,7 +1091,7 @@ label skip:
     $ roomfitness = False
     $ roomclub = False
     $ roomweekend = False
-    $ showerup7amextyes = False
+    $ showerup7amextyes = False #----- added 0.75 Part 2
     if messageirina == 1 or messageirina == 2:
         $ messageirina = 0
         $ irinanotification = 0
@@ -1047,20 +1104,34 @@ label skip:
     hide screen townl
     scene black
     "You go to sleep."
-    if momrelationship < 6 and momntr == True and NTR == True:
-        jump kitchen2am
-    if NTR == True and lilsisrelationship <= 5 and davidealexisfriends == True:
+    if NTR == True and lilsisrelationship <= 5 and davidealexisfriends == True or hardntr == True and adatedavide == True:
         jump basement2am
-    if meet4am == True:
+    elif NTR == True and momrelationship <= 5 or hardntr == True:
+        jump kitchen2am
+    elif meet4am == True:
         $ dtime = 4
         scene black
         "You woke up."
-        pov "{i}It's 4am. I should meet with [ls].{/i}"
+        povi "It's 4am. I should meet with [ls]."
         jump base4amal
-    if hardntr == False:
+    elif hardntr == False:
         jump stats
     elif hardntr == True:
         jump statshard
+
+label skip1:
+    if dtime < 25:
+        $ dtime += 1
+        jump mcroom
+    else:
+        jump skip
+
+label skip2:
+    if dtime < 25:
+        $ dtime += 1
+        jump town
+    else:
+        jump skip
 
 label night:
     if momntr == True:
@@ -1091,7 +1162,6 @@ label night:
         $ vivianrelationship -= 3
         if vivianrelationship < 0:
             $ vivianrelationship = 0
-
     $ giftflowersdaya = False
     $ giftcondomsdaya = False
     $ giftchocolatedaya = False
@@ -1143,22 +1213,6 @@ label night:
         $ dtime = 7
         jump mcroom
 
-label skip1:
-    if dtime < 25:
-        $ dtime += 1
-        jump mcroom
-    else:
-        jump skip
-
-label skip2:
-    if dtime < 25:
-        $ dtime += 1
-        jump town
-    else:
-        jump skip
-
-
-
 label nighthard:
     $ momrelationship -= 20
     if momrelationship < 0:
@@ -1185,7 +1239,6 @@ label nighthard:
         $ vivianrelationship -= 20
         if vivianrelationship < 0:
             $ vivianrelationship = 0
-
     $ giftflowersdaya = False
     $ giftcondomsdaya = False
     $ giftchocolatedaya = False
