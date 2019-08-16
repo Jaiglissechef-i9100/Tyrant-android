@@ -113,8 +113,8 @@ init -501 screen say(who, what):
 
 
 
-    if not renpy.variant("small"):
-        add SideImage() xalign 0.0 yalign 1.0
+
+    add SideImage() xalign 0.0 yalign 1.0
 
 
 init -1 style window is default
@@ -237,34 +237,20 @@ init -1 style choice_button_text is default:
 
 
 init -501 screen quick_menu():
-
-
     zorder 100
-
-    if quick_menu:
-
-        hbox:
-            style_prefix "quick"
-
-            xalign 0.5
-            yalign 1.0
-
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
-
-
-
-
+    hbox:
+        style_prefix "quick"
+        xalign 0.5
+        yalign 1.0
+        if quick_menu:
+            textbutton _("Quick1") action ShowMenu()
+        if quick_menu2:
+            textbutton _("Quick2") action ShowMenu()
 init -1 python:
     config.overlay_screens.append("quick_menu")
 
 default -1 quick_menu = False
+default -1 quick_menu2 = True
 
 init -1 style quick_button is default
 init -1 style quick_button_text is button_text
@@ -322,10 +308,7 @@ init -501 screen navigation():
 
         textbutton _("About") action ShowMenu("about")
 
-        if renpy.variant("pc"):
-
-
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+        textbutton _("Quit") action Quit(confirm=not main_menu)
 
 
 init -1 style navigation_button is gui_button
@@ -639,23 +622,20 @@ init -501 screen file_slots(title):
                     $ slot = i + 1
 
                     button:
-
-                        action If(renpy.get_screen("save"), true=Show("save_name_modal", accept=FileSave(slot)), false=FileLoad(slot))
+                        action FileAction(slot)
 
                         has vbox
 
                         add FileScreenshot(slot) xalign 0.5
 
+                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                            style "slot_time_text"
+
                         text FileSaveName(slot):
                             style "slot_name_text"
 
-                        hbox:
-                            xsize 375
+                        key "save_delete" action FileDelete(slot)
 
-                            text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                                style "slot_time_text"
-
-                            key "save_delete" action FileDelete(slot)
 
             hbox:
                 style_prefix "page"
@@ -711,51 +691,6 @@ init -1 style slot_button:
 init -1 style slot_button_text:
     properties gui.button_text_properties("slot_button")
 
-
-init -501 screen save_name_modal(accept=NullAction()):
-    modal True
-    add Solid("#000000") alpha 0.8
-    style_prefix "save_name_modal"
-
-    frame:
-        has vbox:
-            xalign 0.5
-            spacing 20
-
-        label _("Please name your save:"):
-            text_color gui.text_color
-            xalign 0.5
-
-        null height 10
-
-        input size 40 color gui.hover_color default store.save_name changed set_save_name length 25 allow "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789 -/*":
-            yalign 1.0
-            xalign 0.5
-            xysize (550, 40)
-
-        textbutton _("Save game"):
-            xalign 0.5
-            action [accept, Hide("save_name_modal")]
-
-        key "game_menu" action Hide("save_name_modal")
-
-init -1 style save_name_modal_frame:
-    padding gui.confirm_frame_borders.padding
-    xsize 650
-    xalign 0.5
-    yalign 0.5
-
-init -1 style save_name_modal_frame:
-    variant "touch"
-    padding gui.confirm_frame_borders.padding
-    xsize 650
-    xalign 0.5
-    yalign 0
-    ypos 50
-
-init -1 python:
-    def set_save_name(new_name):
-        store.save_name = new_name
 
 
 
@@ -1245,11 +1180,11 @@ init -501 screen hud:
 
         text ("Money: [money]$") pos (0, 0)
 
-    imagebutton auto "gui/icons/mp_previous_%s.png" xpos 5 ypos 197 action mr.previous focus_mask True
-    imagebutton auto "gui/icons/mp_stop_%s.png" xpos 62 ypos 197 action mr.stop focus_mask True
+    imagebutton auto "gui/icons/mp_previous_%s.png" xpos 5 ypos 230 action mr.Previous() focus_mask True
+    imagebutton auto "gui/icons/mp_stop_%s.png" xpos 62 ypos 230 action [Play ("music", "music/default.mp3",fadein=1), mr.Stop()] focus_mask True
 
-    imagebutton auto "gui/icons/mp_play_%s.png" xpos 128 ypos 197 action mr.play focus_mask True
-    imagebutton auto "gui/icons/mp_next_%s.png" xpos 188 ypos 197 action mr.next focus_mask True
+    imagebutton auto "gui/icons/mp_play_%s.png" xpos 128 ypos 230 action [Stop ("music",fadeout=1)  ,mr.Play()] focus_mask True
+    imagebutton auto "gui/icons/mp_next_%s.png" xpos 188 ypos 230 action mr.Next() focus_mask True
 
 
 
@@ -1599,60 +1534,5 @@ init -1 style nvl_button_text:
 
 
 init -1 style pref_vbox:
-    variant "medium"
+    variant "small"
     xsize 675
-
-
-
-init -501 screen quick_menu():
-    variant "touch"
-
-    zorder 100
-
-    hbox:
-        style_prefix "quick"
-
-        xalign 0.5
-        yalign 1.0
-
-        textbutton _("Back") action Rollback()
-        textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-        textbutton _("Auto") action Preference("auto-forward", "toggle")
-        textbutton _("Menu") action ShowMenu()
-
-
-init -1 style window:
-    variant "small"
-
-
-init -1 style nvl_window:
-    variant "small"
-    background "gui/phone/nvl.png"
-
-init -1 style main_menu_frame:
-    variant "small"
-    background "gui/phone/overlay/main_menu.png"
-
-init -1 style game_menu_outer_frame:
-    variant "small"
-    background "gui/phone/overlay/game_menu.png"
-
-init -1 style game_menu_navigation_frame:
-    variant "small"
-    xsize 510
-
-init -1 style game_menu_content_frame:
-    variant "small"
-    top_margin 0
-
-init -1 style pref_vbox:
-    variant "small"
-    xsize 600
-
-init -1 style slider_pref_vbox:
-    variant "small"
-    xsize None
-
-init -1 style slider_pref_slider:
-    variant "small"
-    xsize 900

@@ -55,23 +55,23 @@ screen dlh_cassandra1():
 
 
     vbox:
-        xpos 174 ypos 307
+        xpos 174 ypos 312
         if cdate5 == False:
-            text "{size=-10}- Go with [bs]{/size}"
-            text "{size=-10}to her first date.{/size}"
+            text "{size=-17}- Go with [bs]{/size}"
+            text "{size=-17}to her first date.{/size}"
         if cdate5 == True and gangmember == False:
-            text "{size=-10}- Become a gangmember.{/size}"
+            text "{size=-17}- Become a gangmember.{/size}"
         if cdate5 == True and gangmember == True and basecasfirst == False:
-            text "{size=-10}- Meet her{/size}"
-            text "{size=-10}in the kitchen.{/size}"
+            text "{size=-17}- Meet her{/size}"
+            text "{size=-17}in the kitchen.{/size}"
         if cdate5 == True and gangmember == True and basecasfirst == True and bigsislove < 50:
-            text "{size=-10}- Gain more love.{/size}"
+            text "{size=-17}- Gain more love.{/size}"
         if cdate5 == True and gangmember == True and basecasfirst == True and bigsislove >= 50 and weekendcasfirst == False:
-            text "{size=-10}- Meet with [bs]{/size}"
-            text "{size=-10}for your second{/size}"
-            text "{size=-10}date.{/size}"
+            text "{size=-17}- Meet with [bs]{/size}"
+            text "{size=-17}for your second{/size}"
+            text "{size=-17}date.{/size}"
         if cdate5 == True and gangmember == True and basecasfirst == True and weekendcasfirst == True:
-            text "{size=-10}- End of this path for now{/size}"
+            text "{size=-17}- End of this path for now{/size}"
 
     frame:
         area (174, 500, 339, 475)
@@ -80,42 +80,42 @@ screen dlh_cassandra1():
             draggable True
             mousewheel True
             has vbox:
-                xpos 178 ypos 500
+                xpos 174 ypos 500
             if cassandra_help_more_love == True:
-                text "{size=-10}- Go with [bs]{/size}"
-                text "{size=-10}to her first date{/size}"
-                text "{size=-10}on the weekend.{/size}"
-                text "{size=-10}- Become a gangmember{/size}"
-                text "{size=-10}- Meet her{/size}"
-                text "{size=-10}in the kitchen.{/size}"
-                text "{size=-10}- Gain 50 love.{/size}"
-                text "{size=-10}- Meet with [bs]{/size}"
-                text "{size=-10}for your second{/size}"
-                text "{size=-10}date.{/size}"
-                text "{size=-10}- End of this path for now{/size}"
+                text "{size=-17}- Go with [bs]{/size}"
+                text "{size=-17}to her first date{/size}"
+                text "{size=-17}on the weekend.{/size}"
+                text "{size=-17}- Become a gangmember{/size}"
+                text "{size=-17}- Meet her{/size}"
+                text "{size=-17}in the kitchen.{/size}"
+                text "{size=-17}- Gain 50 love.{/size}"
+                text "{size=-17}- Meet with [bs]{/size}"
+                text "{size=-17}for your second{/size}"
+                text "{size=-17}date.{/size}"
+                text "{size=-17}- End of this path for now{/size}"
         vbar value YScrollValue ("cassandra_love_vp")
 
 
     vbox:
-        xpos 563 ypos 307
+        xpos 563 ypos 312
         if cdate5 == False:
-            text "{size=-10}- Go with [bs]{/size}"
-            text "{size=-10}to her first date.{/size}"
+            text "{size=-17}- Go with [bs]{/size}"
+            text "{size=-17}to her first date.{/size}"
         if cdate5 == True and gangmember == False:
-            text "{size=-10}- Become a gangmember.{/size}"
+            text "{size=-17}- Become a gangmember.{/size}"
         if cdate5 == True and gangmember == True and basecasfirst == False:
-            text "{size=-10}- Meet her{/size}"
-            text "{size=-10}in the kitchen.{/size}"
+            text "{size=-17}- Meet her{/size}"
+            text "{size=-17}in the kitchen.{/size}"
         if cdate5 == True and gangmember == True and basecasfirst == True and bigsiscorruption < 50:
-            text "{size=-10}- Gain more corruption.{/size}"
+            text "{size=-17}- Gain more corruption.{/size}"
         if cdate5 == True and gangmember == True and basecasfirst == True and bigsiscorruption >= 50 and basecassecond == False:
-            text "{size=-10}- Meet her in{/size}"
-            text "{size=-10}the kitchen again.{/size}"
+            text "{size=-17}- Meet her in{/size}"
+            text "{size=-17}the kitchen again.{/size}"
         if cdate5 == True and gangmember == True and basecasfirst == True and basecassecond == True and basement10cassandraouting == False:
-            text "{size=-10}- Go with her in{/size}"
-            text "{size=-10}the basement.{/size}"
+            text "{size=-17}- Go with her in{/size}"
+            text "{size=-17}the basement.{/size}"
         if cdate5 == True and gangmember == True and basecasfirst == True and basecassecond == True and basement10cassandraouting == True:
-            text "{size=-10}- End of this path for now{/size}"
+            text "{size=-17}- End of this path for now{/size}"
 
     frame:
         area (563, 500, 339, 475)
@@ -124,31 +124,31 @@ screen dlh_cassandra1():
             draggable True
             mousewheel True
             has vbox:
-                xpos 567 ypos 500
+                xpos 563 ypos 500
             if cassandra_help_more_corruption == True:
-                text "{size=-10}- Go with [bs]{/size}"
-                text "{size=-10}to her first date{/size}"
-                text "{size=-10}on the weekend.{/size}"
-                text "{size=-10}- Become a gangmember.{/size}"
-                text "{size=-10}- Meet her in{/size}"
-                text "{size=-10}the kitchen at 9am.{/size}"
-                text "{size=-10}- Gain 50 corruption.{/size}"
-                text "{size=-10}- Meet her in{/size}"
-                text "{size=-10}the kitchen again.{/size}"
-                text "{size=-10}Go with her in the.{/size}"
-                text "{size=-10}basement at 10pm.{/size}"
-                text "{size=-10}- End of this path for now{/size}"
+                text "{size=-17}- Go with [bs]{/size}"
+                text "{size=-17}to her first date{/size}"
+                text "{size=-17}on the weekend.{/size}"
+                text "{size=-17}- Become a gangmember.{/size}"
+                text "{size=-17}- Meet her in{/size}"
+                text "{size=-17}the kitchen at 9am.{/size}"
+                text "{size=-17}- Gain 50 corruption.{/size}"
+                text "{size=-17}- Meet her in{/size}"
+                text "{size=-17}the kitchen again.{/size}"
+                text "{size=-17}Go with her in the.{/size}"
+                text "{size=-17}basement at 10pm.{/size}"
+                text "{size=-17}- End of this path for now{/size}"
         vbar value YScrollValue ("cassandra_corruption_vp")
 
 
     vbox:
-        xpos 981 ypos 307
+        xpos 981 ypos 337
         if NTR == True:
             text "{b}General hints{/b}"
-            text "{size=-10}- Hold relationship on 5 or lower{/size}"
-            text "{size=-10}then you can see events{/size}"
-            text "{size=-10}on different times at{/size}"
-            text "{size=-10}different places.{/size}"
+            text "{size=-17}- Hold relationship on 5 or lower{/size}"
+            text "{size=-17}then you can see events{/size}"
+            text "{size=-17}on different times at{/size}"
+            text "{size=-17}different places.{/size}"
 
 
     frame:

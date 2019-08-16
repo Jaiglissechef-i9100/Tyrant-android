@@ -1,6 +1,6 @@
 
 init -2:
-    $ renpy.music.register_channel("bgm", "music", True, True, True, "bgm/", ".ogg", ".mp3")
+    $ renpy.music.register_channel("bgm", "music", True, True, True, "bgm/")
 
 
 init python:

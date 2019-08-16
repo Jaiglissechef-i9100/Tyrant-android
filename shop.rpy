@@ -11,18 +11,18 @@ screen shop1():
     fixed:
         add "gui/icons/phoneshop.png" xpos 714 ypos 44
         add "gui/icons/flowers_idle.png" xpos 874 ypos 366
-        text "Flowers" xpos 908 ypos 273
+        text "Flowers" xpos 850 ypos 273
 
         if money >= 5:
             imagebutton auto "gui/icons/icon_buy1_%s.png" xpos 788 ypos 758 action (Hide ('shop1'), Jump('buy1fl')) hovered tt.Action ("Buy 1") focus_mask True
         if money >= 25:
             imagebutton auto "gui/icons/icon_buy5_%s.png" xpos 1011 ypos 758 action (Hide ('shop1'), Jump('buy5fl')) hovered tt.Action ("Buy 5") focus_mask True
-        imagebutton auto "gui/icons/back_%s.png" xpos 799 ypos 950 action (Hide ('shop1'), Show('shop3', transition=None)) hovered tt.Action ("Back") focus_mask True
+        imagebutton auto "gui/icons/back_%s.png" xpos 799 ypos 950 action (Hide ('shop1'), Show('shop7', transition=None)) hovered tt.Action ("Back") focus_mask True
         imagebutton auto "gui/icons/forward_%s.png" xpos 1058 ypos 950 action (Hide ('shop1'), Show('shop2', transition=None)) hovered tt.Action ("Next") focus_mask True
         imagebutton auto "gui/icons/close_%s.png" xpos 924 ypos 980 action (Hide ('shop1'), Jump('phone1')) hovered tt.Action ("Close") focus_mask True
 
     vbox:
-        xpos 855 ypos 567
+        xpos 770 ypos 567
         text "+ 5 Relationship"
         text "+ 5 {color=3cff00}Love{/color}"
 
@@ -58,7 +58,7 @@ screen shop2():
     fixed:
         add "gui/icons/phoneshop.png" xpos 714 ypos 44
         add "gui/icons/condoms_idle.png" xpos 874 ypos 366
-        text "Condoms" xpos 908 ypos 273
+        text "Condoms" xpos 850 ypos 273
 
         if money >= 5:
             imagebutton auto "gui/icons/icon_buy1_%s.png" xpos 788 ypos 758 action (Hide ('shop2'), Jump('buy1co')) hovered tt.Action ("Buy 1") focus_mask True
@@ -69,7 +69,7 @@ screen shop2():
         imagebutton auto "gui/icons/close_%s.png" xpos 924 ypos 980 action (Hide ('shop2'), Jump('phone1')) hovered tt.Action ("Close") focus_mask True
 
     vbox:
-        xpos 855 ypos 567
+        xpos 770 ypos 567
         text "+ 5 Relationship"
         text "+ 5 {color=ff0000}Corruption{/color}"
 
@@ -104,7 +104,7 @@ screen shop3():
     fixed:
         add "gui/icons/phoneshop.png" xpos 714 ypos 44
         add "gui/icons/chocolate_idle.png" xpos 874 ypos 366
-        text "Chocolate" xpos 908 ypos 273
+        text "Chocolate" xpos 850 ypos 273
 
         if money >= 5:
             imagebutton auto "gui/icons/icon_buy1_%s.png" xpos 788 ypos 758 action (Hide ('shop3'), Jump('buy1cho')) hovered tt.Action ("Buy 1") focus_mask True
@@ -115,7 +115,7 @@ screen shop3():
         imagebutton auto "gui/icons/close_%s.png" xpos 924 ypos 980 action (Hide ('shop3'), Jump('phone1')) hovered tt.Action ("Close") focus_mask True
 
     vbox:
-        xpos 855 ypos 567
+        xpos 770 ypos 567
         text "+ 5 Relationship"
 
         text "Price: 5 $"
@@ -163,7 +163,7 @@ screen shop4():
         text "Requirements:"
         text "30+ Corruption"
         text "Be a gangmember"
-        text "Second basement event"
+        text "{size=-3}Second basement\n    event"
         text "Price: 75 $"
 
 
@@ -187,7 +187,7 @@ screen shop5():
     fixed:
         add "gui/icons/phoneshop.png" xpos 714 ypos 44
         add "gui/icons/cloth_sweater_pants_idle.png" xpos 930 ypos 366
-        text "Sweater + Pants ([mother])" xpos 780 ypos 273
+        text "{size=-3}Sweater + Pants ([mother])" xpos 755 ypos 273
 
         if momlove >= 30 and nicolesweaterpants == 1 and money >= 75:
             imagebutton auto "gui/icons/icon_buy1_%s.png" xpos 900 ypos 820 action (Hide ('shop5'), Jump('buy1sp')) hovered tt.Action ("Buy 1") focus_mask True
@@ -237,7 +237,7 @@ screen shop6():
         text "Requirements:"
         text "60+ Corruption"
         text "Be a gangmember"
-        text "Basement event (weekend)"
+        text "{size=-3}Basement event\n    (weekend)"
 
         text "Price: 150 $"
 
@@ -275,7 +275,7 @@ screen shop7():
         xpos 760 ypos 507
         text "Requirements:"
         text "80+ Love"
-        text "Home event (weekend)"
+        text "{size=-3}Home event(weekend)"
 
         text "Price: 150 $"
 
