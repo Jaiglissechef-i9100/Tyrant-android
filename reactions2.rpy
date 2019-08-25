@@ -248,4 +248,3 @@ label casreacend:
     $ d5rcntr = False
     $ dtime = 10
     jump kitchen
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

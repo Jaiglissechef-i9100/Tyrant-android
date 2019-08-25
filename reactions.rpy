@@ -1313,4 +1313,3 @@ label nicreacend:
     $ base9nickiss = False
     $ dtime = 7
     jump kitchen
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

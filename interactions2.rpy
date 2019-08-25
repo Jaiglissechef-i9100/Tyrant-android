@@ -141,4 +141,3 @@ screen fitnessicon1():
         frame:
             xalign .5
             text tt.value
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

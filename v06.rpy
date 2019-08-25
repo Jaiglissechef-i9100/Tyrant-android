@@ -3026,4 +3026,3 @@ label cassandrachangetopjeans:
     $ cassandralingeriewear = False
     $ cassandratopjeanswear = True
     jump mcroom
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

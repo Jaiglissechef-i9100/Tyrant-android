@@ -272,4 +272,3 @@ screen townl():
             xpos 50
             ypos 750
             text tt.value
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

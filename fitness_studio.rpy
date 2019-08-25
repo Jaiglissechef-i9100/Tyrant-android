@@ -1336,4 +1336,3 @@ label fitnesscasntrdislike:
         stop music fadeout 2
         play music "music/default.mp3"
     jump town
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -825,4 +825,3 @@ label showerd15ntr2:
             stop music fadeout 2
             play music "music/default.mp3"
         jump showerdown
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

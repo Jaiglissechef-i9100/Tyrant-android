@@ -6539,4 +6539,3 @@ label cdate5loveend2:
         jump weekendskip
     else:
         jump weekendacchoose
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

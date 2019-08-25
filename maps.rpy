@@ -1307,4 +1307,3 @@ label nighthard:
     else:
         $ dtime = 7
         jump mcroom
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

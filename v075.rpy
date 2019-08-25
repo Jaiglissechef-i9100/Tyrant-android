@@ -2510,4 +2510,3 @@ label showerup7extlovehump:
     $ showerup7amextyes = True
     $ dtime += 1
     jump showerup
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -1027,4 +1027,3 @@ label irinadateloveend:
     $ irinadatetemplefirst = True
     "You leave her and go home."
     jump skip
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

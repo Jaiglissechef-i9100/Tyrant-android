@@ -1618,4 +1618,3 @@ label droom6approve:
     $ dadbad += 1
     $ dtime += 1
     jump droom
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

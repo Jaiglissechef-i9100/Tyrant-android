@@ -647,4 +647,3 @@ label intro:
         else:
             pov "{i}Bruce is coming back. Better leave it alone for now!{/i}"
     jump tutorial
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

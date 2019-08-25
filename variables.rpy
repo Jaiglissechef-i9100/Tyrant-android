@@ -620,4 +620,3 @@ init:
     $ davidenotification = 0
     $ replydavidentr = 0
     $ activatesecretplacentr = False
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

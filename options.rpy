@@ -23,7 +23,7 @@ define gui.show_name = False
 
 
 
-define config.version = "0.8.2"
+define config.version = "0.8.2-android"
 
 
 
@@ -231,4 +231,3 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

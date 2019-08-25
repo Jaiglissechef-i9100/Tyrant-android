@@ -372,4 +372,3 @@ label t5pmmf:
         susan "You heard her."
         $ tanning5pmfirst = True
         jump tan1
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

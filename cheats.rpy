@@ -137,4 +137,3 @@ label cheatrelidecrease:
 
 label cheatend:
     jump mcroom
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -787,4 +787,3 @@ label lroom15repcascor:
     $ lroom15extendcascor  = True
     $ dtime += 1
     jump lroom
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

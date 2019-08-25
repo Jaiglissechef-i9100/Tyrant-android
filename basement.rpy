@@ -4615,4 +4615,3 @@ label sellingdrugs2:
         "No more customers for today."
     $ dtime += 1
     jump kitchen
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -280,4 +280,3 @@ label proom24feet:
     $ momcorruption += 1
     $ dtime += 1
     jump parentsroom
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -41,4 +41,3 @@ label bsis14look:
         jump bsisroom
     else:
         jump bsis142look
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

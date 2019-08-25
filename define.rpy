@@ -233,4 +233,3 @@ init:
     image 12pm005niclove1 = "clothing/diningroom/12pm005ncl1.jpg"
     image 12pm005niclove2 = "clothing/diningroom/12pm005ncl2.jpg"
     image 12pm005nicnormal = "clothing/diningroom/12pm005nicnormal.jpg"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

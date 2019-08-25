@@ -1590,4 +1590,3 @@ label bsfd21giftcho:
             irina "Can I have it?"
         $ bigsisrelationship += 5
     jump frontdoor21talk2
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

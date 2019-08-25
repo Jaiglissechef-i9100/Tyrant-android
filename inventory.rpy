@@ -255,4 +255,3 @@ screen inventorygiftfd21c():
     frame:
         xalign .5
         text tt.value
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

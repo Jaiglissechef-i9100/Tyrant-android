@@ -240,7 +240,7 @@ screen dlhmenu():
         imagebutton auto "gui/icons/dlh_close_%s.png" xpos 1604 ypos 122 action (Hide('dlhmenu'), Jump('phone1')) hovered tt.Action ("Close") focus_mask True
 
     vbox:
-        xpos 203 ypos 735
+        xpos 203 ypos 705
         text "Here you can find hints for the paths or events which need a"
         text "setup before. You can read the walkthrough for the girls."
         text "And set up the helper to guide you ingame"
@@ -298,19 +298,19 @@ screen dlh_player1():
     vbox:
         xpos 174 ypos 500
         if player_help_more_gang == True:
-            text "{size=-10}- Meet Davide at 8pm at the front door{/size}"
-            text "{size=-10}- Meet Davide at 9pm in the livingroom{/size}"
-            text "{size=-10}- Deliver 2 packages{/size}"
-            text "{size=-10}- Meet Davide again at 9pm in the livingroom{/size}"
+            text "{size=-17}- Meet Davide at 8pm at the front door{/size}"
+            text "{size=-17}- Meet Davide at 9pm in the livingroom{/size}"
+            text "{size=-17}- Deliver 2 packages{/size}"
+            text "{size=-17}- Meet Davide again at 9pm in the livingroom{/size}"
 
     vbox:
         xpos 1000 ypos 337
         text "{b}General hints{/b}"
-        text "{size=-10}- You can find work at the tanning salon.{/size}"
-        text "{size=-10}- Also you can sell drugs in the basment{/size}"
-        text "{size=-10}when you're a gangmember.{/size}"
-        text "{size=-10}- You'll find the shop in your phone.{/size}"
-        text "{size=-10}- Some events are placed in your room.{/size}"
+        text "{size=-17}- You can find work at the tanning salon.{/size}"
+        text "{size=-17}- Also you can sell drugs in the basment{/size}"
+        text "{size=-17}when you're a gangmember.{/size}"
+        text "{size=-17}- You'll find the shop in your phone.{/size}"
+        text "{size=-17}- Some events are placed in your room.{/size}"
 
     frame:
         xalign .5
@@ -408,4 +408,3 @@ label dlh_more_gang_mc:
 label dlh_hide_gang_mc:
     $ player_help_more_gang = False
     jump dlh_player
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

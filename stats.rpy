@@ -112,4 +112,3 @@ screen stats7():
         if vivianfirstmeet == True:
             text "{color=ff0000}-20 Relationship{/color}"
     textbutton _("close") xpos 885 ypos 906 action Jump("nighthard")
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

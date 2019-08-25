@@ -776,4 +776,3 @@ label ls22kiss:
     $ lilsislove += 1
     $ lilsisroom10pmfirst = True
     jump ls22love2
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

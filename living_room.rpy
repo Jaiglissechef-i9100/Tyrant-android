@@ -3015,4 +3015,3 @@ label lroom11pmstop:
     $ lroom11kiss = True
     $ dtime += 1
     jump lroom
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

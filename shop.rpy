@@ -44,6 +44,7 @@ screen shop1():
 
     frame:
         xalign .5
+        yalign .97
         text tt.value
 
 
@@ -215,4 +216,3 @@ label buy1pa:
     else:
         "You don't fulfill all requirements."
         jump shop
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

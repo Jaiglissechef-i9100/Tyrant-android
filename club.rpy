@@ -1247,4 +1247,3 @@ label club9hardntr:
         play music "music/default.mp3"
     $ club10amfirst = True
     jump club
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -55,25 +55,25 @@ screen dlh_nicole1():
 
 
     vbox:
-        xpos 174 ypos 307
+        xpos 174 ypos 312
         if ndate21 == False:
-            text "{size=-10}- Go with [mother]{/size}"
-            text "{size=-10}to her first date{/size}"
+            text "{size=-17}- Go with [mother]{/size}"
+            text "{size=-17}to her first date{/size}"
         if ndate21 == True and gangmember == False and momlove < 50:
-            text "{size=-10}- Become a gangmember{/size}"
-            text "{size=-10}and gain more love{/size}"
+            text "{size=-17}- Become a gangmember{/size}"
+            text "{size=-17}and gain more love{/size}"
         if ndate21 == True and gangmember == True and momlove >= 50 and basenicfirst == False:
-            text "{size=-10}- Meet [mother] in the{/size}"
-            text "{size=-10}livingroom{/size}"
+            text "{size=-17}- Meet [mother] in the{/size}"
+            text "{size=-17}livingroom{/size}"
         if ndate21 == True and basenicfirst == True and mombasementlovesecond == False:
-            text "{size=-10}- Go with [mother]{/size}"
-            text "{size=-10}to her second date{/size}"
-        if ndate21 == True and basenicfirst == True and mombasementlovesecond == True and basement10pmnicoleouting == False:
-            text "{size=-10}- Go with her in the basement.{/size}"
-        if ndate21 == True and basenicfirst == True and mombasementlovesecond == True and basement10pmnicoleouting == True and proom19first == False:
-            text "{size=-10}- Meet her in the parentsroom{/size}"
+            text "{size=-17}- Go with [mother]{/size}"
+            text "{size=-17}to her second date{/size}"
+        if ndate21 == True and basenicfirst == True and mombasementlovesecond == True:
+            text "{size=-17}- Go with her in the basement.{/size}"
+        if ndate21 == True and basenicfirst == True and mombasementlovesecond == True and basement10pmnicoleouting == True:
+            text "{size=-17}- Meet her in the parentsroom{/size}"
         if ndate21 == True and basenicfirst == True and mombasementlovesecond == True and basement10pmnicoleouting == True and proom19first == True:
-            text "{size=-10}- End of this path for now{/size}"
+            text "{size=-17}- End of this path for now{/size}"
 
 
     frame:
@@ -83,39 +83,39 @@ screen dlh_nicole1():
             draggable True
             mousewheel True
             has vbox:
-                xpos 178 ypos 500
+                xpos 174 ypos 500
             if nicole_help_more_love == True:
-                text "{size=-10}- Go with [mother] to her first date on the weekend.{/size}"
-                text "{size=-10}- Become a gangmember and gain 50 love.{/size}"
-                text "{size=-10}- Meet [mother] in the livingroom at 10pm.{/size}"
-                text "{size=-10}- Go with [mother] to her first second on the weekend.{/size}"
-                text "{size=-10}- Go with [mother] to the basement at 10pm.{/size}"
-                text "{size=-10}- Meet [mother] in the parentsroom at 7pm.{/size}"
-                text "{size=-10}- End of this path for now{/size}"
+                text "{size=-17}- Go with [mother] to her first date on the weekend.{/size}"
+                text "{size=-17}- Become a gangmember and gain 50 love.{/size}"
+                text "{size=-17}- Meet [mother] in the livingroom at 10pm.{/size}"
+                text "{size=-17}- Go with [mother] to her first second on the weekend.{/size}"
+                text "{size=-17}- Go with [mother] to the basement at 10pm.{/size}"
+                text "{size=-17}- Meet [mother] in the parentsroom at 7pm.{/size}"
+                text "{size=-17}- End of this path for now{/size}"
         vbar value YScrollValue ("nicole_love_vp")
 
 
 
     vbox:
-        xpos 563 ypos 307
+        xpos 563 ypos 312
         if ndate21 == False:
-            text "{size=-10}- Go with [mother]"
-            text "{size=-10}to her first date{/size}"
+            text "{size=-17}- Go with [mother]"
+            text "{size=-17}to her first date{/size}"
         if ndate21 == True and gangmember == False and momcorruption < 30:
-            text "{size=-10}- Become a gangmember{/size}"
-            text "{size=-10}and gain more corruption{/size}"
+            text "{size=-17}- Become a gangmember{/size}"
+            text "{size=-17}and gain more corruption{/size}"
         if ndate21 == True and gangmember == True and momlove >= 30 and basenicfirst == False:
-            text "{size=-10}- Meet [mother] in the{/size}"
-            text "{size=-10}livingroom{/size}"
+            text "{size=-17}- Meet [mother] in the{/size}"
+            text "{size=-17}livingroom{/size}"
         if ndate21 == True and basenicfirst == True and mombasementcorsecond == False:
-            text "{size=-10}- Go with [mother]{/size}"
-            text "{size=-10}to her second date{/size}"
+            text "{size=-17}- Go with [mother]{/size}"
+            text "{size=-17}to her second date{/size}"
         if ndate21 == True and basenicfirst == True and mombasementcorsecond == True and basement10pmnicoleouting == False:
-            text "{size=-10}- Go with her in the basement.{/size}"
-        if ndate21 == True and basenicfirst == True and mombasementcorsecond == True and basement10pmnicoleouting == True and proom19first == False:
-            text "{size=-10}- Meet her in the parentsroom{/size}"
+            text "{size=-17}- Go with her in the basement.{/size}"
+        if ndate21 == True and basenicfirst == True and mombasementcorsecond == True and basement10pmnicoleouting == True:
+            text "{size=-17}- Meet her in the parentsroom{/size}"
         if ndate21 == True and basenicfirst == True and mombasementcorsecond == True and basement10pmnicoleouting == True and proom19first == True:
-            text "{size=-10}- End of this path for now{/size}"
+            text "{size=-17}- End of this path for now{/size}"
 
 
     frame:
@@ -125,26 +125,26 @@ screen dlh_nicole1():
             draggable True
             mousewheel True
             has vbox:
-                xpos 567 ypos 500
+                xpos 563 ypos 500
             if nicole_help_more_corruption == True:
-                text "{size=-10}- Go with [mother] to her first date on the weekend.{/size}"
-                text "{size=-10}- Become a gangmember and gain 30 corruption.{/size}"
-                text "{size=-10}- Meet [mother] in the livingroom at 10pm.{/size}"
-                text "{size=-10}- Go with [mother] to her first second on the weekend.{/size}"
-                text "{size=-10}- Go with [mother] to the basement at 10pm.{/size}"
-                text "{size=-10}- Meet [mother] in the parentsroom at 7pm.{/size}"
-                text "{size=-10}- End of this path for now{/size}"
+                text "{size=-17}- Go with [mother] to her first date on the weekend.{/size}"
+                text "{size=-17}- Become a gangmember and gain 30 corruption.{/size}"
+                text "{size=-17}- Meet [mother] in the livingroom at 10pm.{/size}"
+                text "{size=-17}- Go with [mother] to her first second on the weekend.{/size}"
+                text "{size=-17}- Go with [mother] to the basement at 10pm.{/size}"
+                text "{size=-17}- Meet [mother] in the parentsroom at 7pm.{/size}"
+                text "{size=-17}- End of this path for now{/size}"
         vbar value YScrollValue ("nicole_corruption_vp")
 
 
     vbox:
-        xpos 981 ypos 307
+        xpos 981 ypos 337
         if NTR == True:
             text "{b}General hints{/b}"
-            text "{size=-10}- Hold relationship on 5 or lower{/size}"
-            text "{size=-10}then you can see events{/size}"
-            text "{size=-10}on different times at{/size}"
-            text "{size=-10}different places.{/size}"
+            text "{size=-17}- Hold relationship on 5 or lower{/size}"
+            text "{size=-17}then you can see events{/size}"
+            text "{size=-17}on different times at{/size}"
+            text "{size=-17}different places.{/size}"
 
 
     frame:
@@ -271,4 +271,3 @@ label dlh_more_corruption_nic:
 label dlh_hide_corruption_nic:
     $ nicole_help_more_corruption = False
     jump dlh_nicole
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

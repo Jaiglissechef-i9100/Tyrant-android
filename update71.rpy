@@ -938,4 +938,3 @@ label showerd15fuckloveend:
     $ momlove += 1
     $ dtime += 1
     jump showerdown
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -485,4 +485,3 @@ label frontdoor21nogrope:
     $ dtime += 1
     $ frontdoor9pmfirst = True
     jump frontdoor
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

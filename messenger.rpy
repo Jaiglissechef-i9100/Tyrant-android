@@ -294,4 +294,3 @@ label replyirinano1:
     if messageirina == 2:
         $ replyirinano = 2
     jump mes_irina
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

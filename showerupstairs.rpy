@@ -299,4 +299,3 @@ label showerup15end:
     $ lilsisrelationship += 1
     $ dtime += 1
     jump showerup
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

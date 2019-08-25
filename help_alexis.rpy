@@ -29,7 +29,7 @@ screen dlh_alexis1():
         text "Corruption path" xpos 606 ypos 257
         if NTR == True:
             text "NTR" xpos 1087 ypos 257
-            text "{size=-10}(5 or lower relationship needed){/size}" xpos 987 ypos 300
+            text "{size=-17}(5 or lower relationship needed){/size}" xpos 987 ypos 300
         text "Activate helper" xpos 786 ypos 122
 
 
@@ -67,17 +67,17 @@ screen dlh_alexis1():
 
 
     vbox:
-        xpos 174 ypos 307
+        xpos 174 ypos 312
         if adate == False:
-            text "{size=-10}- Go with [ls]{/size}"
-            text "{size=-10}to her first date.{/size}"
+            text "{size=-17}- Go with [ls]{/size}"
+            text "{size=-17}to her first date.{/size}"
         if adate == True and lilsislove < 50:
-            text "{size=-10}- Gain more love.{/size}"
+            text "{size=-17}- Gain more love.{/size}"
         if adate == True and alexisweekendsecond == False and lilsislove >= 50:
-            text "{size=-10}- Go with [ls]{/size}"
-            text "{size=-10}to her second date.{/size}"
+            text "{size=-17}- Go with [ls]{/size}"
+            text "{size=-17}to her second date.{/size}"
         if adate == True and alexisweekendsecond == True:
-            text "{size=-10}- End of this path for now{/size}"
+            text "{size=-17}- End of this path for now{/size}"
 
 
     frame:
@@ -87,32 +87,32 @@ screen dlh_alexis1():
             draggable True
             mousewheel True
             has vbox:
-                xpos 178 ypos 500
+                xpos 174 ypos 500
             if alexis_help_more_love == True:
-                text "{size=-10}- Go with [ls]{/size}"
-                text "{size=-10}to her first date{/size}"
-                text "{size=-10}on the weekend.{/size}"
-                text "{size=-10}- Gain 50 love.{/size}"
-                text "{size=-10}- Go with [ls]{/size}"
-                text "{size=-10}to her second date{/size}"
-                text "{size=-10}on the weekend.{/size}"
-                text "{size=-10}- End of this path for now{/size}"
+                text "{size=-17}- Go with [ls]{/size}"
+                text "{size=-17}to her first date{/size}"
+                text "{size=-17}on the weekend.{/size}"
+                text "{size=-17}- Gain 50 love.{/size}"
+                text "{size=-17}- Go with [ls]{/size}"
+                text "{size=-17}to her second date{/size}"
+                text "{size=-17}on the weekend.{/size}"
+                text "{size=-17}- End of this path for now{/size}"
         vbar value YScrollValue ("alexis_love_vp")
 
 
     vbox:
-        xpos 563 ypos 307
+        xpos 563 ypos 312
         if adate == False:
-            text "{size=-10}- Go with [ls]{/size}"
-            text "{size=-10}to her first date.{/size}"
+            text "{size=-17}- Go with [ls]{/size}"
+            text "{size=-17}to her first date.{/size}"
         if adate == True and gangmember == False:
-            text "{size=-10}- Become a gangmember.{/size}"
+            text "{size=-17}- Become a gangmember.{/size}"
         if adate == True and gangmember == True and lilsiscorruption < 30:
-            text "{size=-10}- Gain more corruption.{/size}"
+            text "{size=-17}- Gain more corruption.{/size}"
         if adate == True and showbasealfirst == False and lilsiscorruption >= 30 and gangmember == True:
-            text "{size=-10}- Meet [ls] in the kitchen.{/size}"
+            text "{size=-17}- Meet [ls] in the kitchen.{/size}"
         if adate == True and alexisweekendsecond == True:
-            text "{size=-10}- End of this path for now{/size}"
+            text "{size=-17}- End of this path for now{/size}"
 
     frame:
         area (563, 500, 339, 475)
@@ -121,40 +121,40 @@ screen dlh_alexis1():
             draggable True
             mousewheel True
             has vbox:
-                xpos 567 ypos 500
+                xpos 563 ypos 500
             if alexis_help_more_corruption == True:
-                text "{size=-10}- Go with [ls]{/size}"
-                text "{size=-10}to her first date{/size}"
-                text "{size=-10}on the weekend.{/size}"
-                text "{size=-10}- Become a gangmember.{/size}"
-                text "{size=-10}- Gain 30 corruption.{/size}"
-                text "{size=-10}- Go with [ls]{/size}"
-                text "{size=-10}- Meet [ls] in the{/size}"
-                text "{size=-10}kitchen at 8am.{/size}"
-                text "{size=-10}- End of this path for now{/size}"
+                text "{size=-17}- Go with [ls]{/size}"
+                text "{size=-17}to her first date{/size}"
+                text "{size=-17}on the weekend.{/size}"
+                text "{size=-17}- Become a gangmember.{/size}"
+                text "{size=-17}- Gain 30 corruption.{/size}"
+                text "{size=-17}- Go with [ls]{/size}"
+                text "{size=-17}- Meet [ls] in the{/size}"
+                text "{size=-17}kitchen at 8am.{/size}"
+                text "{size=-17}- End of this path for now{/size}"
         vbar value YScrollValue ("alexis_corruption_vp")
 
 
     vbox:
-        xpos 981 ypos 307
+        xpos 981 ypos 337
         if NTR == True and adate == False:
-            text "{size=-10}- Go with [ls]{/size}"
-            text "{size=-10}to her first date.{/size}"
+            text "{size=-17}- Go with [ls]{/size}"
+            text "{size=-17}to her first date.{/size}"
         if NTR == True and adate == True and basealefirst == False:
-            text "{size=-10}- Sneak with her{/size}"
-            text "{size=-10}in the basement.{/size}"
+            text "{size=-17}- Sneak with her{/size}"
+            text "{size=-17}in the basement.{/size}"
         if NTR == True and adate == True and basealefirst == True and secretplace2pmntrfirst == False:
-            text "{size=-10}- Go to the{/size}"
-            text "{size=-10}secret place.{/size}"
+            text "{size=-17}- Go to the{/size}"
+            text "{size=-17}secret place.{/size}"
         if NTR == True and adate == True and basealefirst == True and secretplace2pmntrfirst == True and base2amalexisntrfirst == False:
-            text "{size=-10}- Wait until the{/size}"
-            text "{size=-10}basement event at{/size}"
-            text "{size=-10}night happened.{/size}"
+            text "{size=-17}- Wait until the{/size}"
+            text "{size=-17}basement event at{/size}"
+            text "{size=-17}night happened.{/size}"
         if NTR == True and adate == True and basealefirst == True and secretplace2pmntrfirst == True and base2amalexisntrfirst == True and secretplace4pmntrfirst == False:
-            text "{size=-10}- Stay the next{/size}"
-            text "{size=-10}weekend alone.{/size}"
+            text "{size=-17}- Stay the next{/size}"
+            text "{size=-17}weekend alone.{/size}"
         if NTR == True and secretplace4pmntrfirst == True:
-            text "{size=-10}- End of this path for now{/size}"
+            text "{size=-17}- End of this path for now{/size}"
 
 
     frame:
@@ -164,19 +164,19 @@ screen dlh_alexis1():
             draggable True
             mousewheel True
             has vbox:
-                xpos 985 ypos 500
+                xpos 981 ypos 500
             if NTR == True and alexis_help_more_NTR == True:
-                text "{size=-10}- Go with [ls]{/size}"
-                text "{size=-10}to her first date on the weekend.{/size}"
-                text "{size=-10}- Sneak with her at{/size}"
-                text "{size=-10}the basement, start in{/size}"
-                text "{size=-10}your room.{/size}"
-                text "{size=-10}- Go to the secret place at 2pm.{/size}"
-                text "{size=-10}- Wait until the basement event{/size}"
-                text "{size=-10} at night happened, at 2am.{/size}"
-                text "{size=-10}- Stay the next{/size}"
-                text "{size=-10}weekend alone.{/size}"
-                text "{size=-10}- End of this path for now{/size}"
+                text "{size=-17}- Go with [ls]{/size}"
+                text "{size=-17}to her first date on the weekend.{/size}"
+                text "{size=-17}- Sneak with her at{/size}"
+                text "{size=-17}the basement, start in{/size}"
+                text "{size=-17}your room.{/size}"
+                text "{size=-17}- Go to the secret place at 2pm.{/size}"
+                text "{size=-17}- Wait until the basement event{/size}"
+                text "{size=-17} at night happened, at 2am.{/size}"
+                text "{size=-17}- Stay the next{/size}"
+                text "{size=-17}weekend alone.{/size}"
+                text "{size=-17}- End of this path for now{/size}"
         vbar value YScrollValue ("alexis_ntr_vp")
 
     frame:
@@ -364,4 +364,3 @@ label dlh_more_NTR_ale:
 label dlh_hide_NTR_ale:
     $ alexis_help_more_NTR = False
     jump dlh_alexis
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

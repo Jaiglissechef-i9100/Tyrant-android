@@ -1080,4 +1080,3 @@ label secret2ntrdislikenend:
     $ dtime += 1
     $ secretplace2pmntrfirst = True
     jump frontdoor
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

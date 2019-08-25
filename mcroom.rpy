@@ -653,4 +653,3 @@ label gamemusicoff:
     $ gamemusic = False
     stop music fadeout 1
     jump mcroom
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

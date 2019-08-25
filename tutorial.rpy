@@ -40,4 +40,3 @@ label tutorial:
     show screen dlhs
     hide black
     jump lroom
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

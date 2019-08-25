@@ -2215,4 +2215,3 @@ label irinadatetemplemore:
     scene date 10pm 007b
     "You have another date with her."
     jump irinadatetempleconversation
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

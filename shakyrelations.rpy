@@ -77,4 +77,3 @@ label cassandrashakyfd:
     pov "But..."
     $ dtime += 1
     jump frontdoor
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
